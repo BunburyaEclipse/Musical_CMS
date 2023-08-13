@@ -11,15 +11,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
 import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+STORAGE_DIR = BASE_DIR / 'storage'
 
 
 ### Cargar Json
-with open(BASE_DIR / 'secret.json', 'r') as archivo:
+with open(STORAGE_DIR / 'secret.json', 'r') as archivo:
     secret = json.load(archivo)
 
 database_data = secret['database']
@@ -30,12 +30,6 @@ keys_data = secret ['keys']
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = keys_data['django_secret_key']
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -57,7 +51,6 @@ PROYECT_APPS = [
 
 THIRTY_APP = [
     "phonenumber_field",
-    'django_browser_reload',
 ]
 
 INSTALLED_APPS.extend(PROYECT_APPS)
@@ -71,10 +64,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-
-
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
-
 ]
 
 
@@ -83,7 +72,7 @@ ROOT_URLCONF = "academia.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates'],
+        "DIRS": [STORAGE_DIR / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -97,21 +86,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "academia.wsgi.application"
-
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": database_data['NAME'],
-        "USER": database_data['USER'],
-        "HOST": database_data['HOST'],
-        "PASSWORD": database_data['PASSWORD'],
-        "PORT": database_data['PORT'],
-    }
-}
 
 
 # Password validation
@@ -148,10 +122,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/gallery/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = STORAGE_DIR / 'media'
+
+STATICFILES_DIRS = (
+    STORAGE_DIR / 'static',
+)
 
 ALLOWED_EXTENSIONS = ('jpg', 'jpeg', 'png', 'webp')
 

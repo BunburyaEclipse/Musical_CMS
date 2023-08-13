@@ -24,7 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(pattern_name='home:prueba')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 applications_url = [
@@ -32,10 +32,7 @@ applications_url = [
     path("gallery/", include("applications.gallery.urls", namespace="gallery")),
     path("videos/", include("applications.videos.urls", namespace="videos")),
     path("plans/", include("applications.plans.urls", namespace="plans")),
-
-
     path("__reload__/", include("django_browser_reload.urls")),
-
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 urlpatterns.extend(applications_url)
