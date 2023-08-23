@@ -1,0 +1,36 @@
+<!-- Navbar Start -->
+<header class="w-full min-h-16 bg-primary/95 fixed z-50">
+    <div class="container min-h-16 mx-auto flex justify-between items-center">
+        <a href="http://estelarsoft.com" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 576 412" class="max-w-[70px]">
+                <path xmlns="http://www.w3.org/2000/svg" fill="#000000"
+                    d="m 219,2 14,2 32,6 c 3,0 4,2 4,5 v 56 l -1,34 1,30 1,6 -7,-2 c -13,-9 -27,-13 -43,-14 -27,-2 -51,6 -73,23 a 80,80 0 0 0 -31,50 c -4,22 1,43 15,61 a 94,94 0 0 0 111,20 c 14,-6 26,-15 36,-26 10,-11 17,-24 19,-39 l 1,-17 V 24 l 11,4 c 18,12 35,25 50,41 a 197,197 0 0 1 52,142 v 199 c -39,-1 -77,-6 -104,-38 l -21,15 c -15,10 -32,16 -49,21 -17,4 -35,3 -52,2 -21,-1 -41,-6 -60,-15 L 91,376 C 83,371 77,365 70,358 L 48,336 A 316,316 0 0 1 12,269 C 7,258 6,246 4,234 L 2,229 A 752,752 0 0 1 5,172 C 7,154 12,138 20,121 27,106 35,91 47,78 57,67 66,56 77,47 91,36 107,26 124,19 145,10 166,3 190,3 l 3,-1 z"
+                    id="path2" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:label="Logo Base" />
+                <path fill="#000000" xmlns="http://www.w3.org/2000/svg" id="path1"
+                    d="M 529,412 V 261 h -21 v -31 h 65 v 181 z m -69,0 V 261 h -21 v -31 h 64 v 181 z"
+                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:label="Logo Eleveen" />
+                <path xmlns="http://www.w3.org/2000/svg"
+                    d="m 202,172 c -26,12 -38,34 -44,62 l -6,-8 c -6,-16 -5,-32 4,-47 7,-11 19,-17 32,-19 10,-2 19,0 27,4 l 3,2 -3,2 z"
+                    id="path4" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:label="Logo Doc" />
+            </svg>
+        </a>
+        <nav>
+            <button class="btn bg-base-300" onclick="contact_modal.showModal()">Contactenos</button>
+        </nav>
+    </div>
+</header>
+<!-- Navbar End -->
+
+
+<!-- Contact Modal Start -->
+<dialog id="contact_modal" class="modal modal-bottom sm:modal-middle">
+    <form method="dialog" class="modal-box">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        <h3 class="font-bold text-lg">Aviso</h3>
+        <p class="py-4">Hey sir, recuerda poner la información de contato luego</p>
+    </form>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>
+<!-- Contact Modal End -->

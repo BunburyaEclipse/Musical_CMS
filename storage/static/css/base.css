@@ -1,0 +1,21 @@
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+.spacer {
+    aspect-ratio: 900/600;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shadow-card {
+    box-shadow: 0 0 10px 1.5px #F7BE0F;
+}
+
+.naiper {
+    height: 350px;
+    width: 100%;
+}

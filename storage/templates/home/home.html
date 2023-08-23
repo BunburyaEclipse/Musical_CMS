@@ -1,9 +1,249 @@
-
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Home{% endblock title %}
 
 {% block body %}
-    {% include 'includes/header.html' %}
-{% endblock body %}
+{% include 'includes/header.html' %}
 
+<!-- Hero Start -->
+<div class="hero min-h-screen hero-imagen">
+	<div class="hero-overlay bg-opacity-60"></div>
+	<div class="hero-content text-center text-neutral-content">
+		<div class="max-w-md">
+			<h2 class="mb-5 text-5xl font-bold text-primary">Academia Musical A11</h2>
+			<p class="mb-5">La música expresa todo aquello que no puede decirse con palabras y no puede quedar en el
+				silencio</p>
+			<a class="btn btn-primary" href="#planes">Ver planes</a>
+		</div>
+	</div>
+</div>
+
+<style>
+	.hero-imagen {
+		background-image: url({% static 'img/hero-1.jpg' %});
+	}
+
+	.waves-1 {
+		background-image: url({% static 'img/svg/waves-1.svg' %});
+		height: 440px;
+		background-position: bottom;
+	}
+
+	.waves-2 {
+		background-image: url({% static 'img/svg/waves-2.svg' %});
+		background-position: top;
+	}
+
+	.img-1 {
+		background-image: url({% static 'img/guitarist-1.jpg' %});
+	}
+
+	.img-2 {
+		background-image: url({% static 'img/pianist-1.jpg' %});
+	}
+
+	.img-3 {
+		background-image: url({% static 'img/bassist.jpg' %});
+	}
+
+	.img-bg {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 10;
+	}
+
+	.img-bg-md {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.img-bg>h1,
+	p {
+		z-index: 11;
+	}
+
+	.fondo {
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.separador {
+		line-height: 50px;
+	}
+</style>
+
+
+<!-- Hero End -->
+
+<main class="w-full">
+
+	<section class="w-full my-12">
+		<!-- Additional required wrapper -->
+		<div class="container mx-auto naiper swiper m-4">
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
+					<h3 class="text-3xl text-black font-bold">Noticia de ultima hora</h3>
+					<p class="text-[18px] text-primary-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Doloremque aliquid in ratione voluptas.</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+				</div>
+				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
+					<h3 class="text-3xl text-black font-bold">Noticia de ultima hora</h3>
+					<p class="text-[18px] text-primary-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Doloremque aliquid in ratione voluptas.</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+				</div>
+				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
+					<h3 class="text-3xl text-black font-bold">Noticia de ultima hora</h3>
+					<p class="text-[18px] text-primary-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Doloremque aliquid in ratione voluptas.</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+				</div>
+				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
+					<h3 class="text-3xl text-black font-bold">Noticia de ultima hora</h3>
+					<p class="text-[18px] text-primary-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Doloremque aliquid in ratione voluptas.</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+				</div>
+				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
+					<h3 class="text-3xl text-black font-bold">Noticia de ultima hora</h3>
+					<p class="text-[18px] text-primary-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Doloremque aliquid in ratione voluptas.</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+				</div>
+				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
+					<h3 class="text-3xl text-black font-bold">Noticia de ultima hora</h3>
+					<p class="text-[18px] text-primary-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Doloremque aliquid in ratione voluptas.</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+				</div>
+				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
+					<h3 class="text-3xl text-black font-bold">Noticia de ultima hora</h3>
+					<p class="text-[18px] text-primary-content">Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit. Doloremque aliquid in ratione voluptas.</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<div class="divider"></div>
+
+
+	<section class="container flex flex-col justify-center items-center text-center mt-32 mx-auto">
+		<h2 class="text-5xl text-primary font-bold">Contamos con una gran variedad de instrumentos</h2>
+		<ul class="text-3xl my-32 separador">
+			<li>Piano <span class="nf nf-md-piano text-primary"></span></li>
+			<li>Guitarra <span class="nf nf-md-guitar_acoustic text-primary"></span></li>
+			<li>Canto <span class="nf nf-md-microphone_varian text-primaryt"></span></li>
+			<li>Bateria</li>
+			<li>Bajo <span class="nf nf-md-guitar_electric text-primary"></span></li>
+			<li>Violin <span class="nf nf-md-violin text-primary"></span></li>
+		</ul>
+	</section>
+
+	<section class="w-full container mx-auto my-20">
+		<div class="grid grid-cols-1 grid-rows-home-images gap-y-16 md:hidden">
+			<div class="img-bg img-1 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
+				<div class="fondo rounded-3xl absolute"></div>
+				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
+					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
+					aliquam est minima omnis?</p>
+			</div>
+			<div class="img-bg img-2 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
+				<div class="fondo rounded-3xl absolute"></div>
+				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
+					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
+					aliquam est minima omnis?</p>
+			</div>
+			<div class="img-bg img-3 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
+				<div class="fondo rounded-3xl absolute"></div>
+				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
+					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
+					aliquam est minima omnis?</p>
+			</div>
+		</div>
+
+
+		<div class="max-md:hidden md:grid md:grid-cols-2 md:grid-rows-home-images gap-y-16 gap-x-4">
+			<div class="img-1 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary">
+				<div class="fondo rounded-3xl"></div>
+			</div>
+			<div class="flex flex-col items-center justify-center text-center p-4">
+				<h3 class="text-4xl font-bold text-primary mb-6">Esto es una prueba xd</h3>
+				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
+					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
+					culpa illo ipsum?</p>
+			</div>
+			<div class="flex flex-col items-center justify-center text-center p-4">
+				<h3 class="text-4xl font-bold text-primary mb-6">Eso tilín dale tilin xd</h3>
+				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
+					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
+					culpa illo ipsum?</p>
+			</div>
+			<div class="img-2 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary">
+				<div class="fondo rounded-3xl"></div>
+			</div>
+			<div class="img-3 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary">
+				<div class="fondo rounded-3xl"></div>
+			</div>
+			<div class="flex flex-col items-center justify-center text-center p-4">
+				<h3 class="text-4xl font-bold text-primary mb-6">Recuerda que es el eso tilin 2 xd</h3>
+				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
+					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
+					culpa illo ipsum?</p>
+			</div>
+		</div>
+
+
+	</section>
+
+	<div class="spacer waves-1"></div>
+	<div class="relative w-full">
+		<div class="bg-primary w-full h-[1px] absolute top-[-1px]"></div>
+	</div>
+	<section class="w-full bg-primary h-[100vh] flex justify-center items-center">
+		<div class="container mx-auto flex flex-col items-center justify-center">
+			<h1 class="text-center text-[60px] font-bold text-black">¿Que estas esperando para aplicar?</h1>
+			<a class="btn btn-secondary btn-lg mt-10" href="#planes">Ver planes de estudio</a>
+		</div>
+	</section>
+
+	<div class="spacer waves-2 h-[160px] sm:h-[210px] md:h-[270px] lg:h-[440px]"></div>
+
+	<section class="planes">
+
+		<div class="container mx-auto min-h-[500px] w-full mt-32 text-center">
+			<h2 class="text-[3.5rem] font-bold text-primary">Mira nuestros planes de estudio</h2>
+			<div class="w-full flex flex-wrap justify-center items-center gap-8 my-8 p-4" id="planes">
+				<div class="h-min-[400px] w-80 border-secondary border-2 rounded-3xl">
+					<h3 class="text-3xl p-4 font-semibold relative">Piano</h3>
+					<div class="divider"></div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore autem eum accusamus, animi libero expedita officiis praesentium laborum magnam delectus perferendis non vel eaque quidem esse, eveniet explicabo voluptatum</p>
+					<a class="btn btn-primary my-10" href="#"> El futuro del arte</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</main>
+
+
+{% endblock body %}

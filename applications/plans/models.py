@@ -9,7 +9,8 @@ INSTRUMENTS_CHOICES = (
     (2, 'Canto'),
     (3, 'Guitarra'),
     (4, 'Batería'),
-    (5, 'Violin')
+    (5, 'Violin'),
+    (6, 'Bajo')
 )
 
 
