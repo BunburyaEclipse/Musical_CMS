@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 from model_utils import Choices
 from model_utils.fields import StatusField
-from model_utils.models import TimeFramedModel
 
 INSTRUMENTS_CHOICES = (
     (1, 'Piano'),

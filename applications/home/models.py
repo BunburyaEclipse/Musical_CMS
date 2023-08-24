@@ -1,6 +1,4 @@
-from typing import Iterable, Optional
 from django.db import models
-from datetime import datetime
 from model_utils.models import TimeStampedModel
 from phonenumber_field.modelfields import PhoneNumberField
 
@@ -8,7 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 class News(TimeStampedModel):
     title = models.CharField("Titulo", max_length=80, blank=False, null=False)
-    content = models.TextField("Contenido", max_length=50, blank=False, null=False)
+    content = models.TextField("Contenido", max_length=130, blank=False, null=False)
 
     class Meta:
         verbose_name = 'Noticia'
