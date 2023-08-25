@@ -3,13 +3,15 @@ from django.utils import timezone
 from model_utils import Choices
 from model_utils.fields import StatusField
 
+from applications.plans.managers import plansManager
+
 INSTRUMENTS_CHOICES = (
     (1, 'Piano'),
     (2, 'Canto'),
     (3, 'Guitarra'),
     (4, 'Batería'),
     (5, 'Violin'),
-    (6, 'Bajo')
+    (6, 'Bajo'),
 )
 
 
@@ -41,12 +43,14 @@ class Discount(models.Model):
 
 class Plan(models.Model):
     name = models.CharField("Nombre del plan", max_length=80)
-    description = models.TextField("Descripcion del plan")
+    description = models.TextField("Descripcion del plan",   max_length=225)
     instrument = models.SmallIntegerField(choices=INSTRUMENTS_CHOICES)
     Modalidades_Choises = Choices('Online', 'Presencial', 'Curso')
     modality = StatusField(choices_name='Modalidades_Choises')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     discount = models.ForeignKey(Discount, on_delete=models.SET_NULL, blank=True, null=True, related_name='planes')
+    
+    objects = plansManager()
 
     class Meta:
         verbose_name = 'Plan de estudio'

@@ -8,6 +8,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.http import FileResponse
 
+from applications.gallery.managers import HomeImagesManager
+
 # Create your models here.
 
 class Category(models.Model):
@@ -39,6 +41,8 @@ class Image(models.Model):
     public = models.BooleanField("Publico", default=False)
     principal = models.BooleanField("Visible en la pantalla principal", default=False)
     category = models.ManyToManyField(Category, related_name='Imagenes')
+
+    objects = HomeImagesManager()
 
     def __str__(self):
         return f"{self.titulo}"

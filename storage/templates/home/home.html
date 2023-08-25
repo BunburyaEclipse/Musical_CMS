@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 {% block title %}Home{% endblock title %}
 
 {% block body %}
+
 {% include 'includes/header.html' %}
 
 <!-- Hero Start -->
@@ -96,18 +98,20 @@
 
 <!-- Hero End -->
 
-	<main class="w-full">
+<main class="w-full">
 
 	<section class="w-full my-12">
 		<!-- Additional required wrapper -->
 		<div class="container mx-auto naiper swiper m-4">
 			<div class="swiper-wrapper">
-				<!-- Slides -->
+				{% for noticia in noticias %}
 				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
-					<h3 class="text-2xl md:text-3xl text-black font-bold">Noticia de ultima hora</h3>
-					<p class="text-[18px] text-primary-content"></p>
-					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">La semana pasada</p>
+					<h3 class="text-2xl md:text-3xl text-black font-bold">{{noticia.title}}</h3>
+					<p class="text-[18px] text-primary-content">{{noticia.content}}</p>
+					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">{{noticia.pub_date | naturaltime}}</p>
 				</div>
+				{% endfor %}
+
 			</div>
 
 		</div>
@@ -121,10 +125,14 @@
 			instrumentos</h2>
 		<ul class="text-2xl sm:text-3xl my-32 separador">
 			<li>Piano <span class="icomoon-piano text-primary"></span></li>
-			<li>Guitarra <span class="icomoon-guitar-solid text-primary"></span></li></li>
-			<li>Canto <span class="icomoon-microphone-solid text-primary"></span></li></li>
-			<li>Bateria <span class="icomoon-drum-solid text-primary"></span></li></li>
-			<li>Bajo <span class="icomoon-electric-guitar text-primary"></span></li></li>
+			<li>Guitarra <span class="icomoon-guitar-solid text-primary"></span></li>
+			</li>
+			<li>Canto <span class="icomoon-microphone-solid text-primary"></span></li>
+			</li>
+			<li>Bateria <span class="icomoon-drum-solid text-primary"></span></li>
+			</li>
+			<li>Bajo <span class="icomoon-electric-guitar text-primary"></span></li>
+			</li>
 			<li>Violin <span class="icomoon-violin text-primary"></span></li>
 		</ul>
 	</section>
@@ -220,44 +228,113 @@
 			</h2>
 			<div class="w-full flex flex-wrap justify-center items-center gap-8 my-8 p-4" id="planes">
 
-
-				<div class="h-min-[400px] w-80 border-primary border-2 rounded-3xl">
+				{% if instrumentos.piano %}
+				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
 					<h3 class="text-3xl p-4 font-semibold relative">Piano</h3>
 					<div class="prices">
-						<h4 class="text-2xl descuento inline-block">40.00$</h4>
-						<h4 class="text-2xl inline-block">15.00$</h4>
+						<h4 class="text-2xl inline-block">{{instrumentos.piano.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
 					</div>
 					<div class="divider"></div>
-					<p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore autem eum
-						accusamus, animi libero expedita officiis praesentium laborum magnam delectus perferendis non
-						vel eaque quidem esse, eveniet explicabo voluptatum</p>
-					<a class="btn btn-secondary my-10" href="#"> El futuro del arte</a>
+					<p class="px-4">{{instrumentos.piano.description}}</p>
+					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
 				</div>
+				{% endif %}
 
-				
+				{% if instrumentos.guitar %}
+				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
+					<h3 class="text-3xl p-4 font-semibold relative">Guitarra</h3>
+					<div class="prices">
+						<h4 class="text-2xl inline-block">{{instrumentos.guitar.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<p class="px-4">{{instrumentos.guitar.description}}</p>
+					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
+				</div>
+				{% endif %}
+
+				{% if instrumentos.sing %}
+				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
+					<h3 class="text-3xl p-4 font-semibold relative">Canto</h3>
+					<div class="prices">
+						<h4 class="text-2xl inline-block">{{instrumentos.sing.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<p class="px-4">{{instrumentos.sing.description}}</p>
+					<a class="btn btn-secondary my-6 float-" href="#"> El futuro del arte</a>
+				</div>
+				{% endif %}
+
+				{% if instrumentos.drumps %}
+				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
+					<h3 class="text-3xl p-4 font-semibold relative">Bateria</h3>
+					<div class="prices">
+						<h4 class="text-2xl inline-block">{{instrumentos.drumps.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<p class="px-4">{{instrumentos.drumps.description}}</p>
+					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
+				</div>
+				{% endif %}
+
+				{% if instrumentos.bass %}
+				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl relative">
+					<h3 class="text-3xl p-4 font-semibold relative">Bajo</h3>
+					<div class="prices">
+						<h4 class="text-2xl inline-block">{{instrumentos.bass.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<p class="px-4">{{instrumentos.bass.description}}</p>
+					<a class="btn btn-secondary bottom-6 relative" href="#"> El futuro del arte</a>
+				</div>
+				{% endif %}
+
+				{% if instrumentos.violin %}
+				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
+					<h3 class="text-3xl p-4 font-semibold relative">Violin</h3>
+					<div class="prices">
+						<h4 class="text-2xl inline-block">{{instrumentos.violin.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<p class="px-4">{{instrumentos.violin.description}}</p>
+					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
+				</div>
+				{% endif %}
+
+
+
+
 			</div>
 
 		</div>
+
+
+
 	</section>
 
 	<section class="gallery w-full container mx-auto">
 		<div class="swiper naiper-two">
-			<div class="swiper-wrapper p-4">
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 1</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 2</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 3</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 4</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 5</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 6</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 7</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 8</div>
-				<div class="swiper-slide h-32 w-32 bg-secondary">Slide 9</div>
+			<div class="swiper-wrapper h-36">
+
+				{% for imagen in imagenes %}
+				<div class="swiper-slide h-32 w-32 border-primary-focus border-2">
+					<img src="{{imagen.image.url}}" alt="{{img.title}}"
+						class="w-full h-full object-cover object-center">
+				</div>
+				{% endfor %}
+
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
 	</section>
 
-	<section class="container mx-auto my-32 flex flex-col justify-center items-center">
+	{% if contacto %}
+	<section class="container mx-auto mt-32 flex flex-col justify-center items-center">
 		<h3 class="text-4xl sm:text-5xl md:text-6xl text-primary font-bold text-center">¿Donde encontrarnos?</h3>
 		<div>
 			<div class="w-full sm:w-3/4 md:w-8/12 h-96 border-primary border-2 mx-auto my-10" id="map">
@@ -265,22 +342,45 @@
 					class="object-cover w-full h-full">
 			</div>
 			<div class="w-full text-center my-16">
-				<p class="mb-8 px-4 sm:px-8 md:px-32 lg:px-96 text-2xl">Av. Siempre viva al frente del wiki mark en
-					nigeria, y john cena bailando en la playa de hawaiiAv. Siempre viva al frente del wiki mark en
-					nigeria, y john cena bailando en la playa de hawaii.</p>
+				<p class="mb-8 px-4 sm:px-8 md:px-32 lg:px-96 text-2xl">
+					{% if contacto.andress %}
+					{{contacto.andress}}
+					{% else %}
+					Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Doloremque aliquid in ratione voluptasasdasd sdasdasdsadasñdñ jklj.
+					{% endif %}
+
+				</p>
+				{% if contacto.phone %}
+				<span class="font-semibold text-primary text-2xl">{{contacto.phone_format}}</span>
+				{% else %}
 				<span class="font-semibold text-primary text-2xl">+593 98 314 7368</span>
+				{% endif %}
+
 			</div>
 		</div>
 		<div class="text-4xl sm:text-5xl text-primary flex justify-around mx-auto w-full md:w-8/12">
-			<a class="icomoon-instagram" href="#"></a>
-			<a class="icomoon-whatsapp" href="#"></a>
-			<a class="icomoon-tiktok" href="#"></a>
-			<a class="icomoon-facebook" href="#"></a>
+			{% if contacto.instagram %}
+			<a class="icomoon-instagram" href="{{contacto.instagram}}" target="_blank"></a>
+			{% endif %}
+			{% if contacto.whatsapp %}
+			<a class="icomoon-whatsapp" href="{{contacto.whatsapp}}" target="_blank"></a>
+			{% endif %}
+			{% if contacto.tiktok %}
+			<a class="icomoon-tiktok" href="{{contacto.tiktok}}" target="_blank"></a>
+			{% endif %}
+			{% if contacto.facebook %}
+			<a class="icomoon-facebook" href="{{contacto.facebook}}" target="_blank"></a>
+			{% endif %}
 		</div>
 	</section>
+	{% endif %}
+
+
+
 </main>
 <footer
-	class="w-full flex justify-center items-center h-32 bg-primary-focus text-primary-content/30 font-semibold text-3xl">
+	class="w-full flex justify-center items-center h-32 bg-primary-focus text-primary-content/30 font-semibold text-3xl mt-32">
 	<h3>Academia musical a11 <span class="nf nf-fa-copyright"></span></h3>
 </footer>
 

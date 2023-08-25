@@ -7,11 +7,9 @@ const swiper = new Swiper('.naiper', {
 	centeredSlides: false,
 	slidesPerView: 1,
 	spaceBetween: 20,
-	followFinger: true,
-	freeMode: true,
-	speed: 8000,
+	speed: 2000,
 	autoplay: {
-		delay: 0,
+		delay: 2000,
 		disableOnInteraction: false,
 		pauseOnMouseEnter: true,
 	},
@@ -38,10 +36,13 @@ const swiper = new Swiper('.naiper', {
 
 const swiper2 = new Swiper(".naiper-two", {
 	loop: true,
+	rewind: {
+		delay: 2500,
+	},
 	autoplay: {
 		disableOnInteraction: false,
-		pauseOnMouseEnter: true,
-		delay: 1500,
+		pauseOnMouseEnter: false,
+		delay: 2500,
 	},
 	slidesPerView: 1,
 	spaceBetween: 20,
@@ -56,14 +57,3 @@ const swiper2 = new Swiper(".naiper-two", {
 		}
 	}
 });
-
-let iniciarMap = () => {
-	let coord = {
-		lat: -0.1075867,
-		lng: -78.4696461,
-	}
-	let map = new google.maps.Map(mapa, {
-		zoom: 10,
-		center: coord,
-	})
-};

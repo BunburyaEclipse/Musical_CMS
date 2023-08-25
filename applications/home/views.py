@@ -19,7 +19,14 @@ class Prueba(TemplateView):
         context = super().get_context_data(**kwargs)
 
         context['contacto'] = Contact.objects.last()
-        context['contexto2'] = 'Este es el contexto 2'
-        context['contexto3'] = 'Este es el contexto 3'
-
+        context['noticias'] = News.objects.get_last_news
+        context['imagenes'] = Image.objects.gallery_home
+        context['instrumentos'] = {
+            'piano': Plan.objects.get_piano(),
+            'guitar': Plan.objects.get_guitar(),
+            'bass': Plan.objects.get_bass(),
+            'drumps': Plan.objects.get_drumps(),
+            'violin': Plan.objects.get_violin(),
+            'sing': Plan.objects.get_sing()
+        }
         return context
