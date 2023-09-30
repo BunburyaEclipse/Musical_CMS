@@ -30,8 +30,6 @@ urlpatterns = [
 applications_url = [
     path("home/", include("applications.home.urls", namespace="home")),
     path("gallery/", include("applications.gallery.urls", namespace="gallery")),
-    path("videos/", include("applications.videos.urls", namespace="videos")),
-    path("plans/", include("applications.plans.urls", namespace="plans")),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
 

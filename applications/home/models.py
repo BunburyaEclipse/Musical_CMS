@@ -33,7 +33,7 @@ class Contact(models.Model):
         return f"{numb[:4]} {numb[4:6]} {numb[6:9]} {numb[9:]}"
 
     def save(self, *args, **kwargs):
-        if self.whatsapp:
+        if not self.whatsapp:
             self.whatsapp = f'https://wa.me/{self.phone}'
         return super().save(*args, **kwargs)
     

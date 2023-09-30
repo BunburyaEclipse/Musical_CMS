@@ -25,7 +25,7 @@
 			</svg>
 			<p class="my-8">La música expresa todo aquello que no puede decirse con palabras y no puede quedar en el
 				silencio</p>
-			<a class="btn btn-primary" href="#planes">Ver planes</a>
+			<a class="btn btn-primary hover:text-[16px] transition-btn" href="#planes">Ver planes</a>
 		</div>
 	</div>
 </div>
@@ -95,7 +95,6 @@
 	}
 </style>
 
-
 <!-- Hero End -->
 
 <main class="w-full">
@@ -106,8 +105,8 @@
 			<div class="swiper-wrapper">
 				{% for noticia in noticias %}
 				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
-					<h3 class="text-2xl md:text-3xl text-black font-bold">{{noticia.title}}</h3>
-					<p class="text-[18px] text-primary-content">{{noticia.content}}</p>
+					<h3 class="text-2xl md:text-3xl text-black font-bold break-all">{{noticia.title}}</h3>
+					<p class="text-[18px] text-primary-content break-all">{{noticia.content}}</p>
 					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold">{{noticia.pub_date | naturaltime}}</p>
 				</div>
 				{% endfor %}
@@ -215,7 +214,7 @@
 					d="m 219,2 14,2 32,6 c 3,0 4,2 4,5 v 56 l -1,34 1,30 1,6 -7,-2 c -13,-9 -27,-13 -43,-14 -27,-2 -51,6 -73,23 a 80,80 0 0 0 -31,50 c -4,22 1,43 15,61 a 94,94 0 0 0 111,20 c 14,-6 26,-15 36,-26 10,-11 17,-24 19,-39 l 1,-17 V 24 l 11,4 c 18,12 35,25 50,41 a 197,197 0 0 1 52,142 v 199 c -39,-1 -77,-6 -104,-38 l -21,15 c -15,10 -32,16 -49,21 -17,4 -35,3 -52,2 -21,-1 -41,-6 -60,-15 L 91,376 C 83,371 77,365 70,358 L 48,336 A 316,316 0 0 1 12,269 C 7,258 6,246 4,234 L 2,229 A 752,752 0 0 1 5,172 C 7,154 12,138 20,121 27,106 35,91 47,78 57,67 66,56 77,47 91,36 107,26 124,19 145,10 166,3 190,3 l 3,-1 z"
 					id="path2" inkscape:label="Logo Base" fill="#deab0d" />
 			</svg>
-			<a class="btn btn-secondary sm:btn-lg mt-10 z-10" href="#planes">Ver planes de estudio</a>
+			<a class="btn btn-secondary sm:btn-lg mt-10 z-10 sm:hover:text-[20px] transition-btn" href="#planes">Ver planes de estudio</a>
 		</div>
 	</section>
 
@@ -226,87 +225,199 @@
 		<div class="container mx-auto min-h-[500px] w-full mt-32 text-center">
 			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary px-4">Mira nuestros planes de estudio
 			</h2>
-			<div class="w-full flex flex-wrap justify-center items-center gap-8 my-8 p-4" id="planes">
+			<div class="w-full flex flex-wrap justify-center items-center gap-8 my-8 sm:p-4" id="planes">
 
 				{% if instrumentos.piano %}
-				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
-					<h3 class="text-3xl p-4 font-semibold relative">Piano</h3>
+				{% if instrumentos.piano.discount.state == 'Valido' %}
+				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.piano.name}}</h3>
+					<div class="prices">
+						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.piano.price}}$</h4>
+						<h4 class="text-2xl inline-block">{{instrumentos.piano.discount.price}}$</h4>
+						<div></div>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.piano.description}}</p>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
+				</div>
+				{% else %}
+				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.piano.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block">{{instrumentos.piano.price}}$</h4>
 						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
 					</div>
 					<div class="divider"></div>
-					<p class="px-4">{{instrumentos.piano.description}}</p>
-					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.piano.description}}</p>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
 				</div>
 				{% endif %}
-
-				{% if instrumentos.guitar %}
-				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
-					<h3 class="text-3xl p-4 font-semibold relative">Guitarra</h3>
-					<div class="prices">
-						<h4 class="text-2xl inline-block">{{instrumentos.guitar.price}}$</h4>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<p class="px-4">{{instrumentos.guitar.description}}</p>
-					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
-				</div>
 				{% endif %}
 
 				{% if instrumentos.sing %}
-				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
-					<h3 class="text-3xl p-4 font-semibold relative">Canto</h3>
+				{% if instrumentos.sing.discount.state == 'Valido' %}
+				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.sing.name}}</h3>
+					<div class="prices">
+						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.sing.price}}$</h4>
+						<h4 class="text-2xl inline-block">{{instrumentos.sing.discount.price}}$</h4>
+						<div></div>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.sing.description}}</p>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
+				</div>
+				{% else %}
+				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.sing.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block">{{instrumentos.sing.price}}$</h4>
 						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
 					</div>
 					<div class="divider"></div>
-					<p class="px-4">{{instrumentos.sing.description}}</p>
-					<a class="btn btn-secondary my-6 float-" href="#"> El futuro del arte</a>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.sing.description}}</p>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
 				</div>
+				{% endif %}
+				{% endif %}
+
+				{% if instrumentos.guitar %}
+				{% if instrumentos.guitar.discount.state == 'Valido' %}
+				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.guitar.name}}</h3>
+					<div class="prices">
+						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.guitar.price}}$</h4>
+						<h4 class="text-2xl inline-block">{{instrumentos.guitar.discount.price}}$</h4>
+						<div></div>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.guitar.description}}</p>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
+				</div>
+				{% else %}
+				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.guitar.name}}</h3>
+					<div class="prices">
+						<h4 class="text-2xl inline-block">{{instrumentos.guitar.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.guitar.description}}</p>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
+				</div>
+				{% endif %}
 				{% endif %}
 
 				{% if instrumentos.drumps %}
-				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
-					<h3 class="text-3xl p-4 font-semibold relative">Bateria</h3>
+				{% if instrumentos.drumps.discount.state == 'Valido' %}
+				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.drumps.name}}</h3>
+					<div class="prices">
+						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.drumps.price}}$</h4>
+						<h4 class="text-2xl inline-block">{{instrumentos.drumps.discount.price}}$</h4>
+						<div></div>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.drumps.description}}</p>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
+				</div>
+				{% else %}
+				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.drumps.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block">{{instrumentos.drumps.price}}$</h4>
 						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
 					</div>
 					<div class="divider"></div>
-					<p class="px-4">{{instrumentos.drumps.description}}</p>
-					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.drumps.description}}</p>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
 				</div>
+				{% endif %}
 				{% endif %}
 
 				{% if instrumentos.bass %}
-				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl relative">
-					<h3 class="text-3xl p-4 font-semibold relative">Bajo</h3>
+				{% if instrumentos.bass.discount.state == 'Valido' %}
+				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.bass.name}}</h3>
+					<div class="prices">
+						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.bass.price}}$</h4>
+						<h4 class="text-2xl inline-block">{{instrumentos.bass.discount.price}}$</h4>
+						<div></div>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.bass.description}}</p>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
+				</div>
+				{% else %}
+				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.bass.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block">{{instrumentos.bass.price}}$</h4>
 						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
 					</div>
 					<div class="divider"></div>
-					<p class="px-4">{{instrumentos.bass.description}}</p>
-					<a class="btn btn-secondary bottom-6 relative" href="#"> El futuro del arte</a>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.bass.description}}</p>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
 				</div>
+				{% endif %}
 				{% endif %}
 
 				{% if instrumentos.violin %}
-				<div class="min-h-[416px] w-80 border-primary border-2 rounded-3xl">
-					<h3 class="text-3xl p-4 font-semibold relative">Violin</h3>
+				{% if instrumentos.violin.discount.state == 'Valido' %}
+				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.violin.name}}</h3>
 					<div class="prices">
-						<h4 class="text-2xl inline-block">{{instrumentos.violin.price}}$</h4>
+						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.violin.price}}$</h4>
+						<h4 class="text-2xl inline-block">{{instrumentos.piano.discount.price}}$</h4>
+						<div></div>
 						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
 					</div>
 					<div class="divider"></div>
-					<p class="px-4">{{instrumentos.violin.description}}</p>
-					<a class="btn btn-secondary my-6" href="#"> El futuro del arte</a>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.violin.description}}</p>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
+				</div>
+				{% else %}
+				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+					<h3 class="text-3xl p-4 font-semibold relative">{{instrumentos.violin.name}}</h3>
+					<div class="prices">
+						<h4 class="text-2xl inline-block">{{instrumentos.piano.price}}$</h4>
+						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+					</div>
+					<div class="divider"></div>
+					<div class="flex flex-col grow w-f">
+						<p class="px-2 grow break-all">{{instrumentos.piano.description}}</p>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+					</div>
 				</div>
 				{% endif %}
-
-
+				{% endif %}
 
 
 			</div>
@@ -336,14 +447,14 @@
 	{% if contacto %}
 	<section class="container mx-auto mt-32 flex flex-col justify-center items-center">
 		<h3 class="text-4xl sm:text-5xl md:text-6xl text-primary font-bold text-center">¿Donde encontrarnos?</h3>
-		<div>
-			<div class="w-full sm:w-3/4 md:w-8/12 h-96 border-primary border-2 mx-auto my-10" id="map">
+		<div class="w-full">
+			<div class="max-sm:w-full sm:w-9/12 md:w-9/12 h-96 border-primary border-2 mx-auto my-10" id="map">
 				<img src="{% static 'img/mapa.png' %}" alt="mapa de la ubicacion de la academia"
 					class="object-cover w-full h-full">
 			</div>
 			<div class="w-full text-center my-16">
-				<p class="mb-8 px-4 sm:px-8 md:px-32 lg:px-96 text-2xl">
-					{% if contacto.andress %}
+				{% if contacto.andress %}
+				<p class="mb-8 px-4 sm:px-8 md:px-32 lg:px-96 text-2xl break-all">
 					{{contacto.andress}}
 					{% else %}
 					Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -359,18 +470,18 @@
 
 			</div>
 		</div>
-		<div class="text-4xl sm:text-5xl text-primary flex justify-around mx-auto w-full md:w-8/12">
+		<div class="text-4xl sm:text-5xl text-primary flex justify-around mx-auto w-full md:w-8/12 h-[180px]">
 			{% if contacto.instagram %}
-			<a class="icomoon-instagram" href="{{contacto.instagram}}" target="_blank"></a>
+			<a class="icomoon-instagram iconos-redes" href="{{contacto.instagram}}" target="_blank"></a>
 			{% endif %}
 			{% if contacto.whatsapp %}
-			<a class="icomoon-whatsapp" href="{{contacto.whatsapp}}" target="_blank"></a>
+			<a class="icomoon-whatsapp iconos-redes" href="{{contacto.whatsapp}}" target="_blank"></a>
 			{% endif %}
 			{% if contacto.tiktok %}
-			<a class="icomoon-tiktok" href="{{contacto.tiktok}}" target="_blank"></a>
+			<a class="icomoon-tiktok iconos-redes" href="{{contacto.tiktok}}" target="_blank"></a>
 			{% endif %}
 			{% if contacto.facebook %}
-			<a class="icomoon-facebook" href="{{contacto.facebook}}" target="_blank"></a>
+			<a class="icomoon-facebook iconos-redes" href="{{contacto.facebook}}" target="_blank"></a>
 			{% endif %}
 		</div>
 	</section>
@@ -379,10 +490,10 @@
 
 
 </main>
-<footer
-	class="w-full flex justify-center items-center h-32 bg-primary-focus text-primary-content/30 font-semibold text-3xl mt-32">
-	<h3>Academia musical a11 <span class="nf nf-fa-copyright"></span></h3>
-</footer>
+{% include 'includes/footer.html' %}
+
+<script src="{% static 'js/modules/simplyCountdown.min.js' %}"></script>
+<script src="{% static 'js/countdown.js' %}"></script>
 
 
 {% endblock body %}
