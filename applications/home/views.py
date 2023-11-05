@@ -32,7 +32,7 @@ from applications.plans.models import Plan
 #     'descuento_violin': f'Me gustaria preguntar más información sobre el curso de {Plan.objects.get_violin().name} con el vain',
 # }
 
-class Prueba(TemplateView):
+class HomeView(TemplateView):
     template_name = "home/home.html"
 
     def get_context_data(self, **kwargs):

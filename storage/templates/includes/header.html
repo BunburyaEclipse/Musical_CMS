@@ -16,8 +16,8 @@
             </svg>
         </a>
         <nav class="max-md:hidden flex flex-row grow items-center justify-end gap-12">
-            <a href="#" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Inicio</a>
-            <a href="#" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Galeria</a>
+            <a href="{% url 'home:home' %}" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Inicio</a>
+            <a href="{% url 'gallery:gallery' %}" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Galeria</a>
             <a href="#" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Nuestra Historia</a>
             <button class="btn bg-base-300 p-4 hover:text-[16px] transition-btn" onclick="contact_modal.showModal()">Contactenos</button>
         </nav>

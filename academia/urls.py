@@ -24,12 +24,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(pattern_name='home:prueba')),
+    path("home/", include("applications.home.urls", namespace="home")),
+    path("gallery/", include("applications.gallery.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 applications_url = [
-    path("home/", include("applications.home.urls", namespace="home")),
-    path("gallery/", include("applications.gallery.urls", namespace="gallery")),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
 

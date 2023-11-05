@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
-{% block title %}Home{% endblock title %}
-
-
+{% block title %}Gallery{% endblock title %}
 {% block body %}
 
 {% include 'includes/header.html' %}
-<h1>Loco</h1>
+
+<main class="container mx-auto">
+    <div id="gallery" class="mx-auto masonry-grid"></div>
+</main>
 
 {% include 'includes/footer.html' %}
-
-
 {% endblock body %}
-    
+
+
+{% block scripts %}
+
+<script src="{% static 'js/modules/mansory.js' %}"></script>
+<script src="{% static 'js/gallery.js' %}" type="module"></script>
+{% endblock scripts %}
+
+</body>
+
+</html>
