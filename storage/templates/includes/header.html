@@ -18,8 +18,8 @@
         <nav class="max-md:hidden flex flex-row grow items-center justify-end gap-12">
             <a href="{% url 'home:home' %}" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Inicio</a>
             <a href="{% url 'gallery:gallery' %}" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Galeria</a>
-            <a href="#" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Nuestra Historia</a>
-            <button class="btn bg-base-300 p-4 hover:text-[16px] transition-btn" onclick="contact_modal.showModal()">Contactenos</button>
+            <a href="{% url 'home:about' %}" class="text-xl text-primary-content font-semibold hover:text-[22px] transition-all duration-300">Nuestra Historia</a>
+            <button class="btn bg-base-300 p-4 hover:text-[16px] transition-btn" onclick="contact_modal.showModal()">Contactanos</button>
         </nav>
             <button class="icomoon-bars-solid text-primary-content text-4xl md:hidden z-[100]" id="menuBtn"></button>
         <nav class="w-screen h-screen absolute top-0 left-0 bg-primary translate-x-[-1200px] transition-transform duration-500 ease-out md:hidden" id="menu">
@@ -27,7 +27,7 @@
                 <a href="#" class="text-[23px] text-primary-content font-semibold hover:text-[26px] transition-all duration-300">Inicio</a>
                 <a href="#" class="text-[23px] text-primary-content font-semibold hover:text-[26px] transition-all duration-300">Galeria</a>
                 <a href="#" class="text-[23px] text-primary-content font-semibold hover:text-[26px] transition-all duration-300">Nuestra Historia</a>
-                <button class="btn bg-base-300 w-1/2 p-4" onclick="contact_modal.showModal()">Contactenos</button>
+                <button class="btn bg-base-300 w-1/2 p-4" onclick="contact_modal.showModal()">Contactanos</button>
             </ul>
         </nav>
     </div>

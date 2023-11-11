@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Nuestra Historia{% endblock title %}
+{% block body %}
+
+{% include 'includes/header.html' %}
+<main class="w-full min-h-screen">
+<div class="container mx-auto text-center">
+    <div class="h-24 w-full"></div>
+    <div class="sm:px-12">
+        <h1 class="text-4xl md:text-5xl">Biografia</h1>
+        <p class="mt-4">Soy Javier Da Cruz, Licenciado en Tecnología Administrativa con especialización en Mercadotecnia y también músico. En el 2017, después de cerrar mi pequeño negocio de comida rápida en Guayaquil, Ecuador, busqué trabajo en la enseñanza musical. Tras una prueba pedagógica en una pequeña academia, me ofrecieron un empleo con un trato increíble, prometiendo el 70% de la mensualidad por estudiante. Sin embargo, me utilizaron para videos promocionales y nunca me llamaron para empezar. Después de quedarme desempleado, mi esposa Raquel sugirió que diera clases de música, a pesar de contar solo con una vieja guitarra acústica y condiciones limitadas. A pesar de las dificultades, decidí intentarlo y comencé mi nueva travesía.</p>
+        <div class="flex justify-center gap-8 mt-4 flex-wrap">
+            <img src="{% static 'img/about/img-1.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-80 sm:h-96 lg:h-[27rem] aspect-square">
+            <img src="{% static 'img/about/img2.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-80 sm:h-96 lg:h-[27rem] aspect-square">
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="px-12">
+        <h1 class="text-4xl md:text-5xl">Luego amplie el espacio</h1>
+        <div class="columns-2 flex justify-center gap-8 mt-4 flex-wrap">
+            <img src="{% static 'img/about/img3.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-80 aspect-square">
+            <img src="{% static 'img/about/img4.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-96 aspect-square">
+            <img src="{% static 'img/about/img5.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-80 aspect-square">
+            <img src="{% static 'img/about/img6.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-80 aspect-square">
+        </div>
+    </div>
+    <div class="px-12">
+        <div class="divider"></div>
+        <h1 class="text-4xl md:text-5xl">Seguí invirtiendo en ampliar el espacia</h1>
+        <div class="columns-2 flex justify-center gap-8 mt-4 flex-wrap">
+            <img src="{% static 'img/about/img9.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-80 aspect-square">
+            <img src="{% static 'img/about/img10.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-96 aspect-square">
+            <img src="{% static 'img/about/img8.jpg' %}" alt="profesor javier clases de musica" class="object-cover h-80 aspect-square">
+        </div>
+    </div>
+</div>
+</main>
+{% include 'includes/footer.html' %}
+{% endblock body %}

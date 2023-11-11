@@ -49,3 +49,7 @@ class HomeView(TemplateView):
             'sing': Plan.objects.get_sing()
         }
         return context
+    
+
+class about_us(TemplateView):
+    template_name = "home/about_us.html"
