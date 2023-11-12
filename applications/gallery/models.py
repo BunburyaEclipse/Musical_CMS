@@ -36,6 +36,7 @@ def custom_image_name(instance, filename):
 
 class Image(models.Model):
     titulo = models.CharField()
+    slug = models.SlugField(unique=True, blank=True, editable=False)
     image = models.ImageField(upload_to=custom_image_name, blank=False)
     pub_date = models.DateTimeField("Fecha de publicacion", default=timezone.now, blank=True, null=False, editable=False)
     public = models.BooleanField("Publico", default=False)
@@ -46,6 +47,10 @@ class Image(models.Model):
 
     def __str__(self):
         return f"{self.titulo}"
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(f"{self.titulo}-{self.pk}-{self.pub_date}")
+        super().save(*args, **kwargs)
 
 
 def optimize_image(sender, instance, **kwargs):
