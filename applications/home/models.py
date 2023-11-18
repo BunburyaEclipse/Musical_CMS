@@ -1,7 +1,7 @@
 from django.utils import timezone
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
-from .managers import NewsManager
+from .managers import NewsManager, plansManager
 
 # Create your models here.
 
@@ -26,6 +26,9 @@ class Contact(models.Model):
     tiktok = models.URLField("Url de tiktok", max_length=100)
     whatsapp = models.URLField("Url de whatsapp", blank=True, null=False)
     andress = models.TextField("Dirección", blank=False, null=False, max_length=350)
+
+    objects = plansManager()
+
 
     @property
     def phone_format(self):

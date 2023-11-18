@@ -4,7 +4,9 @@ module.exports = {
     "../templates/**/*.{html,js}",
     "../static/**/*.{html,js}",
     "../templates/gallery/gallery.html",
-    "../templates/home/about_us.html"
+    "../templates/home/about_us.html",
+    "../templates/gallery/Image_Details.html",
+
   ],
   theme: {
     extend: {

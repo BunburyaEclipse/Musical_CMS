@@ -47,7 +47,6 @@ PROYECT_APPS = [
     "applications.home",
     "applications.gallery",
     "applications.plans",
-    # "applications.videos",
 ]
 
 THIRTY_APP = [
