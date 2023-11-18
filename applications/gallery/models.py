@@ -5,8 +5,6 @@ from django.core.exceptions import ValidationError
 from PIL import Image as PilImage
 import os
 from django.db.models.signals import post_save
-from django.dispatch import receiver
-from django.http import FileResponse
 
 from applications.gallery.managers import HomeImagesManager
 
@@ -35,7 +33,7 @@ def custom_image_name(instance, filename):
 
 
 class Image(models.Model):
-    titulo = models.CharField()
+    titulo = models.CharField(max_length=100, blank=False)
     slug = models.SlugField(unique=True, blank=True, editable=False)
     image = models.ImageField(upload_to=custom_image_name, blank=False)
     pub_date = models.DateTimeField("Fecha de publicacion", default=timezone.now, blank=True, null=False, editable=False)

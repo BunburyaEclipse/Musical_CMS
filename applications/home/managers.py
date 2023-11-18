@@ -11,3 +11,10 @@ class HomeImagesManager(models.Manager):
 class NewsManager(models.Manager):
     def get_last_news(self):
         return self.order_by('-pub_date')[:8]
+
+
+
+
+class plansManager(models.Manager):
+    def get_whatsapp(self):
+        return self.last().whatsapp

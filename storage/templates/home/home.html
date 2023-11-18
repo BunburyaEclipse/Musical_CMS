@@ -239,7 +239,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.piano.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="{{mensajes.piano}}">Preguntar</a>
 					</div>
 				</div>
 				{% else %}
@@ -252,7 +252,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.piano.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="{{mensajes.piano}}">Preguntar</a>
 					</div>
 				</div>
 				{% endif %}
@@ -271,7 +271,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.sing.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="{{mensajes.canto}}">Preguntar</a>
 					</div>
 				</div>
 				{% else %}
@@ -284,7 +284,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.sing.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="{{mensajes.canto}}">Preguntar</a>
 					</div>
 				</div>
 				{% endif %}
@@ -303,7 +303,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.guitar.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="{{mensajes.guitarra}}">Preguntar</a>
 					</div>
 				</div>
 				{% else %}
@@ -316,7 +316,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.guitar.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="{{mensajes.guitarra}}">Preguntar</a>
 					</div>
 				</div>
 				{% endif %}
@@ -335,7 +335,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.drumps.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="{{mensajes.bateria}}">Preguntar</a>
 					</div>
 				</div>
 				{% else %}
@@ -348,7 +348,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.drumps.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="{{mensajes.bateria}}">Preguntar</a>
 					</div>
 				</div>
 				{% endif %}
@@ -367,7 +367,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.bass.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="{{mensajes.bajo}}">Preguntar</a>
 					</div>
 				</div>
 				{% else %}
@@ -380,7 +380,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.bass.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="{{mensajes.bajo}}">Preguntar</a>
 					</div>
 				</div>
 				{% endif %}
@@ -399,7 +399,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.violin.description}}a</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-neutral my-6 w-1/2 mx-auto" href="{{mensajes.violin}}">Preguntar</a>
 					</div>
 				</div>
 				{% else %}
@@ -412,7 +412,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-all">{{instrumentos.violin.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="#">Preguntar</a>
+						<a class="btn btn-secondary my-6 w-1/2 mx-auto" href="{{mensajes.violin}}">Preguntar</a>
 					</div>
 				</div>
 				{% endif %}
@@ -432,10 +432,10 @@
 			<div class="swiper-wrapper h-36">
 
 				{% for imagen in imagenes %}
-				<div class="swiper-slide h-32 w-32 border-primary-focus border-2">
+				<a class="swiper-slide h-32 w-32 border-primary-focus border-2" href="{% url 'gallery:image_detail' imagen.pk %}">
 					<img src="{{imagen.image.url}}" alt="{{img.title}}"
 						class="w-full h-full object-cover object-center">
-				</div>
+				</a>
 				{% endfor %}
 
 			</div>
