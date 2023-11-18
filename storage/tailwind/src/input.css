@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.iconos-redes {
+    @apply hover:text-[55px] transition-all duration-300;
+}
