@@ -1,2 +1,4 @@
 ./storage/media/images/*
-.storage/media/secret.json
+secret.json
+tailwind
+__pycache__
