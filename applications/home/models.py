@@ -17,6 +17,7 @@ class News(models.Model):
         verbose_name_plural = 'Noticias'
 
 
+wa_link = ""
 
 class Contact(models.Model):
     email = models.EmailField("Email", max_length=50)
@@ -34,10 +35,14 @@ class Contact(models.Model):
     def phone_format(self):
         numb = str(self.phone)
         return f"{numb[:4]} {numb[4:6]} {numb[6:9]} {numb[9:]}"
+    
+    @property
+    def wa_link(self):
+        wa_link = f"{self.whatsapp}?text="
+        return wa_link
 
     def save(self, *args, **kwargs):
-        if not self.whatsapp:
-            self.whatsapp = f'https://wa.me/{self.phone}'
+        self.whatsapp = f'https://wa.me/{self.phone}'
         return super().save(*args, **kwargs)
     
     class Meta:

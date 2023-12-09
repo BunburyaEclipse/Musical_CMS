@@ -2024,8 +2024,8 @@ html {
 .grid-rows-4 {
   grid-template-rows: repeat(4, minmax(0, 1fr));
 }
-.grid-rows-home-images {
-  grid-template-rows: repeat(6, 78vh);
+.grid-rows-mobile-images {
+  grid-template-rows: repeat(6, 80vh);
 }
 .flex-row {
   flex-direction: row;

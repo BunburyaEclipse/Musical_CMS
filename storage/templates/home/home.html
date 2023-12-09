@@ -136,7 +136,7 @@
 	</section>
 
 	<section class="w-full container mx-auto my-20">
-		<div class="grid grid-cols-1 grid-rows-home-images gap-y-16 md:hidden">
+		<div class="grid grid-cols-1 grid-rows-mobile-images gap-y-16 md:hidden">
 			<div class="img-bg img-1 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
 				<div class="fondo rounded-3xl absolute"></div>
 				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
@@ -492,7 +492,7 @@
 		</div>
 	</section>
 
-	{% if contacto %}
+	{% if contact %}
 	<section class="container mx-auto mt-32 flex flex-col justify-center items-center">
 		<h3 class="text-4xl sm:text-5xl md:text-6xl text-primary font-bold text-center">Donde encontrarnos</h3>
 		<div class="w-full">
@@ -501,17 +501,17 @@
 					class="object-cover w-full h-full">
 			</div>
 			<div class="w-full text-center my-16">
-				{% if contacto.andress %}
+				{% if contact.andress %}
 				<p class="mb-8 px-4 sm:px-8 md:px-32 lg:px-96 text-2xl break-all">
-					{{contacto.andress}}
+					{{contact.andress}}
 					{% else %}
 					Lorem ipsum dolor sit amet, consectetur adipisicing
 					elit. Doloremque aliquid in ratione voluptasasdasd sdasdasdsadasñdñ jklj.
 					{% endif %}
 
 				</p>
-				{% if contacto.phone %}
-				<span class="font-semibold text-primary text-2xl">{{contacto.phone_format}}</span>
+				{% if contact.phone %}
+				<span class="font-semibold text-primary text-2xl">{{contact.phone_format}}</span>
 				{% else %}
 				<span class="font-semibold text-primary text-2xl">+593 98 314 7368</span>
 				{% endif %}
@@ -519,17 +519,17 @@
 			</div>
 		</div>
 		<div class="text-4xl sm:text-5xl text-primary flex justify-around mx-auto w-full md:w-8/12 h-[180px]">
-			{% if contacto.instagram %}
-			<a class="icomoon-instagram iconos-redes instagram_ico" href="{{contacto.instagram}}" target="_blank"></a>
+			{% if contact.instagram %}
+			<a class="icomoon-instagram iconos-redes instagram_ico" href="{{contact.instagram}}" target="_blank"></a>
 			{% endif %}
-			{% if contacto.whatsapp %}
-			<a class="icomoon-whatsapp iconos-redes whatsapp_ico" href="{{contacto.whatsapp}}" target="_blank"></a>
+			{% if contact.whatsapp %}
+			<a class="icomoon-whatsapp iconos-redes whatsapp_ico" href="{{contact.whatsapp}}" target="_blank"></a>
 			{% endif %}
-			{% if contacto.tiktok %}
-			<a class="icomoon-tiktok iconos-redes tiktok_ico" href="{{contacto.tiktok}}" target="_blank"></a>
+			{% if contact.tiktok %}
+			<a class="icomoon-tiktok iconos-redes tiktok_ico" href="{{contact.tiktok}}" target="_blank"></a>
 			{% endif %}
-			{% if contacto.facebook %}
-			<a class="icomoon-facebook iconos-redes facebook_ico" href="{{contacto.facebook}}" target="_blank"></a>
+			{% if contact.facebook %}
+			<a class="icomoon-facebook iconos-redes facebook_ico" href="{{contact.facebook}}" target="_blank"></a>
 			{% endif %}
 		</div>
 	</section>

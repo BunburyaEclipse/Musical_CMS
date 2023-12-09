@@ -85,6 +85,7 @@ TEMPLATES = [
         },
     },
 ]
+TEMPLATES[0]["OPTIONS"]["context_processors"].append("applications.home.context_proccesors.Contact_Processor")
 
 
 WSGI_APPLICATION = 'Academia_a11.wsgi.application'

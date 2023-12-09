@@ -24,11 +24,10 @@ def get_links():
         (f'Me gustaría preguntar más información sobre el curso de {Plan.objects.get_guitar().name} con el valor de ${Plan.objects.get_guitar().price} por favor 😄' if Plan.objects.get_guitar() else ''),
         (f'Me gustaría preguntar más información sobre el curso de {Plan.objects.get_bass().name} con el valor de ${Plan.objects.get_bass().price} por favor 😄' if Plan.objects.get_bass() else ''),
         (f'Me gustaría preguntar más información sobre el curso de {Plan.objects.get_violin().name} con el valor de ${Plan.objects.get_violin().price} por favor 😄' if Plan.objects.get_violin() else ''),    ]
-    
-    whatsapp = f'{Contact.objects.get_whatsapp()}?text='
+
     for msg in msg_redes:
         quoted = urllib.parse.quote_plus(msg)
-        link = whatsapp + quoted
+        link = Contact.objects.last().wa_link + quoted
         links.append(link)
 
     link_redes = links
@@ -61,7 +60,6 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['contacto'] = Contact.objects.last()
         context['noticias'] = News.objects.get_last_news
         context['imagenes'] = Image.objects.gallery_home
         context['instrumentos'] = {
