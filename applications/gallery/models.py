@@ -10,11 +10,11 @@ from applications.gallery.managers import HomeImagesManager
 
 # Create your models here.
 
-class Category(models.Model):
-    name = models.CharField("Nombre de la categoria", max_length=50)
+# class Category(models.Model):
+#     name = models.CharField("Nombre de la categoria", max_length=50)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 
 
@@ -39,7 +39,7 @@ class Image(models.Model):
     pub_date = models.DateTimeField("Fecha de publicacion", default=timezone.now, blank=True, null=False, editable=False)
     public = models.BooleanField("Publico", default=False)
     principal = models.BooleanField("Visible en la pantalla principal", default=False)
-    category = models.ManyToManyField(Category, related_name='Imagenes')
+    # category = models.ManyToManyField(Category, related_name='Imagenes')
 
     objects = HomeImagesManager()
 
