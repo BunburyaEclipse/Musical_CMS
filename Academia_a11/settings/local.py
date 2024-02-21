@@ -3,7 +3,7 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -13,11 +13,11 @@ ALLOWED_HOSTS = []
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": getenv("NAME"),
-        "USER": getenv("USER"),
-        "HOST": getenv("HOST"),
-        "PASSWORD": getenv("PASSWORD"),
-        "PORT": getenv("PORT"),
+        "NAME": database_env['db_name'],
+        "USER": database_env['db_user'],
+        "HOST": database_env['db_host'],
+        "PASSWORD": database_env['db_passwd'],
+        "PORT": database_env['db_port'],
     }
 }
 

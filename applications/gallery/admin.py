@@ -4,4 +4,4 @@ from .models import *
 
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
-    filter_horizontal = ('category',)
+    pass
