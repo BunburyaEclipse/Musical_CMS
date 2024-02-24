@@ -4,9 +4,11 @@ from .models import *
 # Register your models here.
 
 # admin.site.register(Prueba)
-admin.site.register(Plan)
 
-
-@admin.register(Discount)
-class DiscountAdmin(admin.ModelAdmin):
-    pass
+@admin.register(Plan)
+class PlanAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (None, {
+            'fields': ("name", "description", "instrument", "price"),
+        }),
+    )

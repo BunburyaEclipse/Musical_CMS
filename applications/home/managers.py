@@ -17,4 +17,9 @@ class NewsManager(models.Manager):
 
 class plansManager(models.Manager):
     def get_whatsapp(self):
-        return self.last().whatsapp
+        if self.last():
+            return self.last().whatsapp
+        else:
+            return "No whatsapp incluido"
+
+    

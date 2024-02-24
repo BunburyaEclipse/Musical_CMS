@@ -2025,7 +2025,7 @@ html {
   grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 .grid-rows-mobile-images {
-  grid-template-rows: repeat(6, 80vh);
+  grid-template-rows: repeat(5, 80vh);
 }
 .flex-row {
   flex-direction: row;
@@ -2066,6 +2066,9 @@ html {
 }
 .gap-y-16 {
   row-gap: 4rem;
+}
+.break-words {
+  overflow-wrap: break-word;
 }
 .break-all {
   word-break: break-all;
@@ -2173,6 +2176,9 @@ html {
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-thin {
+  font-weight: 100;
 }
 .text-black {
   --tw-text-opacity: 1;

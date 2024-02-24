@@ -10,14 +10,6 @@ from applications.gallery.managers import HomeImagesManager
 
 # Create your models here.
 
-class Category(models.Model):
-    name = models.CharField("Nombre de la categoria", max_length=50)
-
-    def __str__(self):
-        return self.name
-
-
-
 def custom_image_name(instance, filename):
     # Obtiene la extensión del archivo original
     ext = "webp"
@@ -33,7 +25,7 @@ def custom_image_name(instance, filename):
 
 
 class Image(models.Model):
-    titulo = models.CharField(max_length=100, blank=False)
+    titulo = models.CharField(max_length=50, blank=False)
     slug = models.SlugField(unique=True, blank=True, editable=False)
     image = models.ImageField(upload_to=custom_image_name, blank=False)
     pub_date = models.DateTimeField("Fecha de publicacion", default=timezone.now, blank=True, null=False, editable=False)

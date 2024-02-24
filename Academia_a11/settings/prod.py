@@ -5,7 +5,7 @@ from .env_var import env_allowed_host
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = database_env['allowed_hosts']
+ALLOWED_HOSTS = [" * ",]
 
 
 

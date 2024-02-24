@@ -20,11 +20,11 @@ class News(models.Model):
 wa_link = ""
 
 class Contact(models.Model):
-    email = models.EmailField("Email", max_length=50)
+    email = models.EmailField("Email", max_length=50, blank=True, null=True)
     phone = PhoneNumberField(region='EC')
-    facebook = models.URLField("Url de facebook", max_length=100)
-    instagram = models.URLField("Url de instagram", max_length=100)
-    tiktok = models.URLField("Url de tiktok", max_length=100)
+    facebook = models.URLField("Url de facebook", max_length=100, blank=True, null=True)
+    instagram = models.URLField("Url de instagram", max_length=100, blank=True, null=True)
+    tiktok = models.URLField("Url de tiktok", max_length=100, blank=True, null=True)
     whatsapp = models.URLField("Url de whatsapp", blank=True, null=False)
     andress = models.TextField("Dirección", blank=False, null=False, max_length=350)
 
