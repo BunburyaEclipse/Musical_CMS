@@ -13,5 +13,6 @@ database_env = {
     "db_host": os.environ.get('HOST'),
     "db_port": os.environ.get('PORT'),
     "SECRET_KEY": os.environ.get('DJANGO_SECRET_KEY'),
+    "db_link": os.environ.get('DB_LINK')
     # "allowed_hosts": os.environ('ALLOWED_HOSTS').split(" ")
 }

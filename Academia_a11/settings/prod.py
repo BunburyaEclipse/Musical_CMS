@@ -1,11 +1,11 @@
 from .base import *
 import dj_database_url
-from .env_var import env_allowed_host
+from os import path
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [" * ",]
+ALLOWED_HOSTS = [" * "]
 
 
 
@@ -23,8 +23,48 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.parse(database_env['db_link'])
+
 
 # DATABASES["default"] = dj_database_url.parse("postgres://deus:OrZmSVTxLKcHl24DbgBd7cURmvpcSHFh@dpg-cncj1qen7f5s73bh31ug-a.oregon-postgres.render.com/db_academia")
+
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/gallery/'
+
+
+
+if not DEBUG:
+    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #############
+
+
+
+
+ALLOWED_HOSTS = ['*']
+
+
+
+# Database
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
 STATIC_URL = '/static/'
