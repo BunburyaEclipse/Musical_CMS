@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Academia_a11.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Academia_a11.settings.prod')
 
 application = get_wsgi_application()
