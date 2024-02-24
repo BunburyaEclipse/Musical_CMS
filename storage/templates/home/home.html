@@ -48,15 +48,22 @@
 	}
 
 	.img-1 {
-		background-image: url({% static 'img/guitarist-1.jpg' %});
+		background-image: url({% static 'img/home/home_1.jpeg' %});
 	}
-
 	.img-2 {
-		background-image: url({% static 'img/pianist-1.jpg' %});
+		background-image: url({% static 'img/home/home_2.jpg'  %});
 	}
-
 	.img-3 {
-		background-image: url({% static 'img/bassist.jpg' %});
+		background-image: url({% static 'img/home/home_3.jpg'  %});
+	}
+	.img-4 {
+		background-image: url({% static 'img/home/home_4.jpeg'  %});
+	}
+	.img-5 {
+		background-image: url({% static 'img/home/home_5.jpg'  %});
+	}
+	.img-6 {
+		background-image: url({% static 'img/home/home_6.jpg'  %});
 	}
 
 	.img-bg {
@@ -87,7 +94,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: 10;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.4);
 	}
 
 	.separador {
@@ -137,14 +144,14 @@
 
 	<section class="w-full container mx-auto my-20">
 		<div class="grid grid-cols-1 grid-rows-mobile-images gap-y-16 md:hidden">
-			<div class="img-bg img-1 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
+			<div class="img-bg img-3 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
 				<div class="fondo rounded-3xl absolute"></div>
 				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
 					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
 					aliquam est minima omnis?</p>
 			</div>
-			<div class="img-bg img-2 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
+			<div class="img-bg img-3 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
 				<div class="fondo rounded-3xl absolute"></div>
 				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
@@ -187,16 +194,12 @@
 				<div class="fondo rounded-3xl"></div>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6">Esto es una prueba xd</h3>
-				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
-					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
-					culpa illo ipsum?</p>
+				<h3 class="text-4xl font-bold text-primary mb-6">Experiencia</h3>
+				<p class="text-base">Ofrecemos una variedad de cursos y contamos con años dedicandonos a la enseñansa del arte de la música</p>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6">Esto es otra prueba</h3>
-				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
-					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
-					culpa illo ipsum?</p>
+				<h3 class="text-4xl font-bold text-primary mb-6">Variedad</h3>
+				<p class="text-base">Tenemos una gran variedad de instrumentos músicales</p>
 			</div>
 			<div class="img-2 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
 				<div class="fondo rounded-3xl"></div>
@@ -205,40 +208,39 @@
 				<div class="fondo rounded-3xl"></div>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6">No se que poner aqui xd</h3>
-				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
-					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
-					culpa illo ipsum?</p>
+				<h3 class="text-4xl font-bold text-primary mb-6">Cualquiera puede aprender</h3>
+				<p class="text-base">No importa tu edad, ni tu ritmo de aprendizaje, nuestra metodologia de estudio busca adaptarse a las necesidades de cada estudiante.</p>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
+				<h3 class="text-4xl font-bold text-primary mb-6">Enfoque profesional</h3>
+				<p class="text-base">Nos enfocamos en dar un aprendizaje con enfoque profesional, que no solo abarca la practica, si no también la teoria, con el objetivo de formar a músicos implacables.</p>
+			</div>
+			<div class="img-4 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
+				<div class="fondo rounded-3xl"></div>
+			</div>
+
+			<div class="img-5 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
+				<div class="fondo rounded-3xl"></div>
+			</div>
+			<div class="flex flex-col items-center justify-center text-center p-4">
+				<h3 class="text-4xl font-bold text-primary mb-6">Compañerismo</h3>
+				<p class="text-base">Impulsamos un ambiente armonico y cooperativo, en el que priorizamos </p>
+			</div>
+
+			
+			{% comment %}
+				
+			
+			<!-- <div class="flex flex-col items-center justify-center text-center p-4">
 				<h3 class="text-4xl font-bold text-primary mb-6">Esto es otra prueba</h3>
 				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
 					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
 					culpa illo ipsum?</p>
-			</div>
-			<div class="img-2 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
-				<div class="fondo rounded-3xl"></div>
-			</div>
-
-			<div class="img-1 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
-				<div class="fondo rounded-3xl"></div>
-			</div>
-			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6">Esto es una prueba xd</h3>
-				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
-					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
-					culpa illo ipsum?</p>
-			</div>
-
-			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6">Esto es otra prueba</h3>
-				<p class="text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione optio et illum
-					cum iste, quos officiis obcaecati alias neque saepe sed quia totam quae iusto accusamus delectus
-					culpa illo ipsum?</p>
-			</div>
-			<div class="img-2 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
-				<div class="fondo rounded-3xl"></div>
-			</div>
+				</div>
+				<div class="img-6 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
+					<div class="fondo rounded-3xl"></div>
+				</div> -->
+				{% endcomment %}
 		</div>
 
 

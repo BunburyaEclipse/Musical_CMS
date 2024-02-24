@@ -2409,7 +2409,7 @@ html {
   }
 
   .md\:grid-rows-home-images {
-    grid-template-rows: repeat(6, 78vh);
+    grid-template-rows: repeat(5, 78vh);
   }
 
   .md\:px-32 {
