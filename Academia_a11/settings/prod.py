@@ -1,27 +1,23 @@
 from .base import *
 import dj_database_url
 from os import path
+from .env_var import RENDER_EXTERNAL_HOSTNAME
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env_vars['DEBUG']
 
-ALLOWED_HOSTS = env_vars['ALLOWED_HOSTS']
+ALLOWED_HOSTS = []
+
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": database_env['db_name'],
-        "USER": database_env['db_user'],
-        "HOST": database_env['db_host'],
-        "PASSWORD": database_env['db_passwd'],
-        "PORT": database_env['db_port'],
-    }
+    "default": dj_database_url.config(default=env_vars['DB_LINK'])
 }
 
-DATABASES['default'] = dj_database_url.parse(env_vars['DB_LINK'])
 
 
 # DATABASES["default"] = dj_database_url.parse("postgres://deus:OrZmSVTxLKcHl24DbgBd7cURmvpcSHFh@dpg-cncj1qen7f5s73bh31ug-a.oregon-postgres.render.com/db_academia")
