@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 STORAGE_DIR = BASE_DIR / 'storage'
 
 
-with open(BASE_DIR / 'etc/secrets/secret.json', 'r') as file:
+with open(BASE_DIR / 'secret.json', 'r') as file:
     env_vars = json.load(file)
 
 SECRET_KEY = env_vars['DJANGO_SECRET_KEY']
