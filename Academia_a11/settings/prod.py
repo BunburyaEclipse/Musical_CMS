@@ -3,9 +3,9 @@ import dj_database_url
 from os import path
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env_vars['DEBUG']
 
-ALLOWED_HOSTS = [" * "]
+ALLOWED_HOSTS = env_vars['ALLOWED_HOSTS']
 
 
 
@@ -23,7 +23,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.parse(database_env['db_link'])
+DATABASES['default'] = dj_database_url.parse(env_vars['DB_LINK'])
 
 
 # DATABASES["default"] = dj_database_url.parse("postgres://deus:OrZmSVTxLKcHl24DbgBd7cURmvpcSHFh@dpg-cncj1qen7f5s73bh31ug-a.oregon-postgres.render.com/db_academia")

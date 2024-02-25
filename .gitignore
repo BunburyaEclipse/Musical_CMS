@@ -415,3 +415,5 @@ pyrightconfig.json
 staticfiles/
 
 */__pycache__/
+
+etc/
