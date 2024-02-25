@@ -5,22 +5,9 @@ from os import path
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env_vars['DEBUG']
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = env_vars['ALLOWED_HOSTS']
-=======
-ALLOWED_HOSTS = [
-"44.226.145.213",
-"54.187.200.255",
-"34.213.214.55",
-"35.164.95.156",
-"44.230.95.183",
-"44.229.200.200"
-]
->>>>>>> 03d23f0c163c935a1f51f1f92fe751cda3ea2827
 
 
-
-# Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
