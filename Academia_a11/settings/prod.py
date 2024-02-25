@@ -32,23 +32,6 @@ STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    #############
-
-
-
-
 ALLOWED_HOSTS = ['*']
 
 
@@ -59,3 +42,20 @@ ALLOWED_HOSTS = ['*']
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/gallery/'
+
+
+
+##### CONFIGURACIÓNES DE SEGURIDAD
+
+
+SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+
+SECURE_HSTS_SECONDS = 31536000  # Un año en segundos
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_HSTS_PRELOAD = True
