@@ -4,7 +4,7 @@ from os import path
 from .env_var import RENDER_EXTERNAL_HOSTNAME
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env_vars['DEBUG']
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
