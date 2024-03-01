@@ -4,7 +4,7 @@ from os import path
 from .env_var import RENDER_EXTERNAL_HOSTNAME
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -48,14 +48,16 @@ MEDIA_URL = '/gallery/'
 ##### CONFIGURACIÓNES DE SEGURIDAD
 
 
-SECURE_SSL_REDIRECT = True
+secure_var = False
 
-SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = secure_var
 
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = secure_var
 
-SECURE_HSTS_SECONDS = 31536000  # Un año en segundos
+CSRF_COOKIE_SECURE = secure_var
 
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_SECONDS = 300
 
-SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = secure_var
+
+SECURE_HSTS_PRELOAD = secure_var
