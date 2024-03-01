@@ -48,7 +48,7 @@ MEDIA_URL = '/gallery/'
 ##### CONFIGURACIÓNES DE SEGURIDAD
 
 
-secure_var = False
+secure_var = True
 
 SECURE_SSL_REDIRECT = secure_var
 
@@ -56,7 +56,7 @@ SESSION_COOKIE_SECURE = secure_var
 
 CSRF_COOKIE_SECURE = secure_var
 
-# SECURE_HSTS_SECONDS = 300
+SECURE_HSTS_SECONDS = 300
 
 SECURE_HSTS_INCLUDE_SUBDOMAINS = secure_var
 
