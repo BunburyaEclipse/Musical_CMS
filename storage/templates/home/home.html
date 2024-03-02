@@ -256,212 +256,214 @@
 	</section>
 	<div class="spacer waves-2 h-[160px] sm:h-[210px] md:h-[270px] lg:h-[440px] xl:h-[500px] 2xl:h-[680px]"></div>
 
-	<section class="planes">
+    <section class="planes">
 
-		<div class="container mx-auto min-h-[500px] w-full mt-32 text-center">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary px-4 anta_font">Planes de estudio</h2>
-			<div class="w-full flex flex-wrap justify-center items-center gap-8 my-8 sm:p-4" id="planes">
+        <div class="container mx-auto min-h-[500px] w-full mt-32 text-center">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-primary px-4 anta_font">Planes de estudio</h2>
+            <div class="w-full flex flex-wrap justify-center items-center gap-8 my-8 sm:p-4" id="planes">
 
-				{% if instrumentos.piano %}
-				{% if instrumentos.piano.discount.state == 'Valido' %}
-				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h3>
-					<div class="prices">
-						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.piano.price}}$</h4>
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.piano.discount.price}}$</h4>
-						<div></div>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.piano}}">Preguntar</a>
-					</div>
-				</div>
-				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h3>
-					<div class="prices">
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.piano.price}}$</h4>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.piano}}">Preguntar</a>
-					</div>
-				</div>
-				{% endif %}
-				{% endif %}
+                {% if instrumentos.piano %}
+                {% if instrumentos.piano.discount.state == 'Valido' %}
+                <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.piano.price}}$</h4>
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.piano.discount.price}}$</h4>
+                        <div></div>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 
-				{% if instrumentos.sing %}
-				{% if instrumentos.sing.discount.state == 'Valido' %}
-				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h3>
-					<div class="prices">
-						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.sing.price}}$</h4>
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.sing.discount.price}}$</h4>
-						<div></div>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.canto}}">Preguntar</a>
-					</div>
-				</div>
-				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h3>
-					<div class="prices">
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.sing.price}}$</h4>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.canto}}">Preguntar</a>
-					</div>
-				</div>
-				{% endif %}
-				{% endif %}
+                    </div>
+                </div>
+                {% else %}
+                <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.piano.price}}$</h4>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-full">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endif %}
+                
+                {% if instrumentos.sing %}
+                {% if instrumentos.sing.discount.state == 'Valido' %}
+                <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.sing.price}}$</h4>
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.sing.discount.price}}$</h4>
+                        <div></div>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.sing.price}}$</h4>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 
-				{% if instrumentos.guitar %}
-				{% if instrumentos.guitar.discount.state == 'Valido' %}
-				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h3>
-					<div class="prices">
-						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.guitar.price}}$</h4>
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.guitar.discount.price}}$</h4>
-						<div></div>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.guitarra}}">Preguntar</a>
-					</div>
-				</div>
-				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h3>
-					<div class="prices">
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.guitar.price}}$</h4>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.guitarra}}">Preguntar</a>
-					</div>
-				</div>
-				{% endif %}
-				{% endif %}
+                    </div>
+                </div>
+                {% endif %}
+                {% endif %}
 
-				{% if instrumentos.drumps %}
-				{% if instrumentos.drumps.discount.state == 'Valido' %}
-				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h3>
-					<div class="prices">
-						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.drumps.price}}$</h4>
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.drumps.discount.price}}$</h4>
-						<div></div>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bateria}}">Preguntar</a>
-					</div>
-				</div>
-				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h3>
-					<div class="prices">
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.drumps.price}}$</h4>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bateria}}">Preguntar</a>
-					</div>
-				</div>
-				{% endif %}
-				{% endif %}
+                {% if instrumentos.guitar %}
+                {% if instrumentos.guitar.discount.state == 'Valido' %}
+                <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.guitar.price}}$</h4>
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.guitar.discount.price}}$</h4>
+                        <div></div>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.guitar.price}}$</h4>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endif %}
 
-				{% if instrumentos.bass %}
-				{% if instrumentos.bass.discount.state == 'Valido' %}
-				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h3>
-					<div class="prices">
-						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.bass.price}}$</h4>
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.bass.discount.price}}$</h4>
-						<div></div>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bajo}}">Preguntar</a>
-					</div>
-				</div>
-				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h3>
-					<div class="prices">
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.bass.price}}$</h4>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bajo}}">Preguntar</a>
-					</div>
-				</div>
-				{% endif %}
-				{% endif %}
+                {% if instrumentos.drumps %}
+                {% if instrumentos.drumps.discount.state == 'Valido' %}
+                <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.drumps.price}}$</h4>
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.drumps.discount.price}}$</h4>
+                        <div></div>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.drumps.price}}$</h4>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endif %}
 
-				{% if instrumentos.violin %}
-				{% if instrumentos.violin.discount.state == 'Valido' %}
-				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h3>
-					<div class="prices">
-						<h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.violin.price}}$</h4>
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.violin.discount.price}}$</h4>
-						<div></div>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.violin.description}}a</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.violin}}">Preguntar</a>
-					</div>
-				</div>
-				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h3>
-					<div class="prices">
-						<h4 class="text-2xl inline-block anta_font">{{instrumentos.violin.price}}$</h4>
-						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
-					</div>
-					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
-						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.violin.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.violin}}">Preguntar</a>
-					</div>
-				</div>
-				{% endif %}
-				{% endif %}
+                {% if instrumentos.bass %}
+                {% if instrumentos.bass.discount.state == 'Valido' %}
+                <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.bass.price}}$</h4>
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.bass.discount.price}}$</h4>
+                        <div></div>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.bass.price}}$</h4>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endif %}
 
-
-			</div>
-
-		</div>
+                {% if instrumentos.violin %}
+                {% if instrumentos.violin.discount.state == 'Valido' %}
+                <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.violin.price}}$</h4>
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.violin.discount.price}}$</h4>
+                        <div></div>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.violin.description}}a</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.violin}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h3>
+                    <div class="prices">
+                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.violin.price}}$</h4>
+                        <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
+                    </div>
+                    <div class="divider"></div>
+                    <div class="flex flex-col grow w-f">
+                        <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.violin.description}}</p>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.violin}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endif %}
 
 
+            </div>
 
-	</section>
+        </div>
+
+
+
+    </section>
 
 	<section class="gallery w-full container mx-auto">
 		<div class="swiper naiper-two">
