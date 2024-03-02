@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
-{% block title %}Home{% endblock title %}
+{% block title %}Academia Musical A11 | Home{% endblock title %}
 
 {% block body %}
 
@@ -33,7 +33,7 @@
 
 <style>
 	.hero-imagen {
-		background-image: url({% static 'img/hero-1.jpg' %});
+		background-image: url({% static 'img/hero.webp' %});
 	}
 
 	.waves-1 {
@@ -48,22 +48,22 @@
 	}
 
 	.img-1 {
-		background-image: url({% static 'img/home/home_1.jpeg' %});
+		background-image: url({% static 'img/home/home_1.webp' %});
 	}
 	.img-2 {
-		background-image: url({% static 'img/home/home_2.jpg'  %});
+		background-image: url({% static 'img/home/home_2.webp'  %});
 	}
 	.img-3 {
-		background-image: url({% static 'img/home/home_3.jpg'  %});
+		background-image: url({% static 'img/home/home_3.webp'  %});
 	}
 	.img-4 {
 		background-image: url({% static 'img/home/home_4.jpeg'  %});
 	}
 	.img-5 {
-		background-image: url({% static 'img/home/home_5.jpg'  %});
+		background-image: url({% static 'img/home/home_5.webp'  %});
 	}
 	.img-6 {
-		background-image: url({% static 'img/home/home_6.jpg'  %});
+		background-image: url({% static 'img/home/home_6.webp'  %});
 	}
 
 	.img-bg {
@@ -275,25 +275,26 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.piano}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+
 					</div>
 				</div>
 				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+				<div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
 					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block anta_font">{{instrumentos.piano.price}}$</h4>
 						<!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
 					</div>
 					<div class="divider"></div>
-					<div class="flex flex-col grow w-f">
+					<div class="flex flex-col grow w-full">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.piano}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% endif %}
 				{% endif %}
-
+				
 				{% if instrumentos.sing %}
 				{% if instrumentos.sing.discount.state == 'Valido' %}
 				<div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
@@ -307,11 +308,11 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.canto}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+				<div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
 					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block anta_font">{{instrumentos.sing.price}}$</h4>
@@ -320,7 +321,8 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.canto}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+
 					</div>
 				</div>
 				{% endif %}
@@ -339,11 +341,11 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.guitarra}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+				<div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
 					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block anta_font">{{instrumentos.guitar.price}}$</h4>
@@ -352,7 +354,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.guitarra}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% endif %}
@@ -371,11 +373,11 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bateria}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+				<div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
 					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block anta_font">{{instrumentos.drumps.price}}$</h4>
@@ -384,7 +386,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bateria}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% endif %}
@@ -403,11 +405,11 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bajo}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+				<div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
 					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block anta_font">{{instrumentos.bass.price}}$</h4>
@@ -416,7 +418,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.bajo}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% endif %}
@@ -435,11 +437,11 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.violin.description}}a</p>
-						<a class="btn btn-neutral my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.violin}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.violin}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% else %}
-				<div class="h-[416px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
+				<div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
 					<h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h3>
 					<div class="prices">
 						<h4 class="text-2xl inline-block anta_font">{{instrumentos.violin.price}}$</h4>
@@ -448,7 +450,7 @@
 					<div class="divider"></div>
 					<div class="flex flex-col grow w-f">
 						<p class="px-2 grow break-words anta_font font-thin">{{instrumentos.violin.description}}</p>
-						<a class="btn btn-secondary my-6 w-1/2 mx-auto anta_font anta_space" href="{{mensajes.violin}}">Preguntar</a>
+						<a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.violin}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 					</div>
 				</div>
 				{% endif %}
@@ -484,7 +486,7 @@
 		<h3 class="text-4xl sm:text-5xl md:text-6xl text-primary font-bold text-center anta_font anta_space">Donde encontrarnos</h3>
 		<div class="w-full">
 			<div class="max-sm:w-full sm:w-9/12 md:w-9/12 h-96 border-primary border-2 mx-auto my-10" id="map">
-				<img src="{% static 'img/mapa.png' %}" alt="mapa de la ubicacion de la academia"
+				<img src="{% static 'img/mapa.webp' %}" alt="mapa de la ubicacion de la academia"
 					class="object-cover w-full h-full">
 			</div>
 			<div class="w-full text-center my-16">
@@ -528,7 +530,7 @@
 {% include 'includes/footer.html' %}
 
 {% block scripts %}
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="{% static 'js/modules/swiper.min.js' %}"></script>
 <script src="{% static 'js/home.js' %}"></script>
 {% endblock scripts %}
 	
