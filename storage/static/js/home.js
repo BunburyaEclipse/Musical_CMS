@@ -1,4 +1,4 @@
-const swiper = new Swiper('.naiper', {
+const swiperr = new Swiper('.naiper', {
 	// Optional parameters
 	rewind: true,
 	followFinger: false,
