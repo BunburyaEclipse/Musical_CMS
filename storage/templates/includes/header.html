@@ -27,7 +27,7 @@
                 <a href="{% url 'home:home' %}" class="text-[23px] text-primary-content font-semibold hover:text-[26px] transition-all duration-300 anta_font">Inicio</a>
                 <a href="{% url 'gallery:gallery' %}" class="text-[23px] text-primary-content font-semibold hover:text-[26px] transition-all duration-300 anta_font">Galeria</a>
                 <a href="{% url 'home:home'%}#planes" class="text-[23px] text-primary-content font-semibold hover:text-[26px] transition-all duration-300 anta_font">Planes de estudio</a>
-                <button class="btn bg-base-300 w-1/2 p-4 anta_font anta_space" onclick="contact_modal.showModal();showMenuBtn()">Contactanos</button>
+                <button class="btn bg-base-300 w-1/2 p-4 anta_font anta_space" onclick="contact_modal.showModal();">Contactanos</button>
             </ul>
         </nav>
     </div>
@@ -46,7 +46,7 @@
             <h5 class="col-span-[1/2] row-span-[1/2]">Email:</h5>
             <p class="col-span-[2/3] row-span-[1/2]">{{contact.email}}</p>
         </div>
-        <a href="{% url 'home:home'%}#planes" class="btn btn-primary mx-auto anta_font anta_space">Más Informacion</a>
+        <a href="{% url 'home:home'%}#planes" class="btn btn-primary mx-auto anta_font anta_space" id="modal_info_btn">Más Informacion</a>
 
     </form>
     <form method="dialog" class="modal-backdrop">
