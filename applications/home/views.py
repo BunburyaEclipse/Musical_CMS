@@ -1,6 +1,7 @@
 import urllib.parse
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.http import HttpResponse
 
 """ MODELOS """
 
@@ -79,3 +80,9 @@ class HomeView(TemplateView):
             'violin': link_redes[5],
         }
         return context
+    
+
+
+def serve_robots_txt(request):
+    content = "User-agent: *\nDisallow:"
+    return HttpResponse(content, content_type='text/plain')

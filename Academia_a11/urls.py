@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
+from applications.home.views import serve_robots_txt
 
 
 urlpatterns = [
@@ -26,4 +27,5 @@ urlpatterns = [
     path("", RedirectView.as_view(pattern_name='home:home')),
     path("home/", include("applications.home.urls", namespace="home")),
     path("gallery/", include("applications.gallery.urls")),
+    path("robots.txt", serve_robots_txt, name="robots")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
