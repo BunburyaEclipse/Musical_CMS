@@ -79,7 +79,3 @@ class HomeView(TemplateView):
             'violin': link_redes[5],
         }
         return context
-    
-
-class about_us(TemplateView):
-    template_name = "home/about_us.html"

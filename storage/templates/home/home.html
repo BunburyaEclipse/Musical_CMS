@@ -109,7 +109,7 @@
 			<div class="swiper-wrapper">
 				{% for noticia in noticias %}
 				<div class="swiper-slide h-72 w-72 bg-primary p-6 rounded-3xl relative">
-					<h3 class="text-2xl md:text-3xl text-black font-bold break-words anta_font">{{noticia.title}}</h3>
+					<h4 class="text-2xl md:text-3xl text-black font-bold break-words anta_font">{{noticia.title}}</h4>
 					<p class="text-[18px] text-primary-content break-words anta_font">{{noticia.content}}</p>
 					<p class="text-gray-600 bottom-8 z-50 absolute font-semibold anta_font anta_space">{{noticia.pub_date | naturaltime}}</p>
 				</div>
@@ -143,31 +143,28 @@
 		<div class="grid grid-cols-1 grid-rows-mobile-images gap-y-16 md:hidden">
 			<div class="img-bg img-1 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
 				<div class="fondo rounded-3xl absolute"></div>
-				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
-				<p class="anta_font anta_space">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
-					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
-					aliquam est minima omnis?</p>
+				<h5 class="text-3xl text-primary font-bold mb-10">Experiencia</h3>
+				<p class="anta_font anta_space">Descubre nuestra amplia selección de cursos de música a precios asequibles, respaldada por años de experiencia dedicados a la enseñanza del arte musical.</p>
 			</div>
 			<div class="img-bg img-2 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
 				<div class="fondo rounded-3xl absolute"></div>
-				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
-				<p class="anta_font anta_space">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
-					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
-					aliquam est minima omnis?</p>
+				<h5 class="text-3xl text-primary font-bold mb-10">Variedad</h3>
+				<p class="anta_font anta_space">Explora nuestra variedad de instrumentos musicales, contamos clases de piano, canto, guitarra, bateria, bajo y violín.</p>
 			</div>
 			<div class="img-bg img-3 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
 				<div class="fondo rounded-3xl absolute"></div>
-				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
-				<p class="anta_font anta_space">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
-					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
-					aliquam est minima omnis?</p>
+				<h5 class="text-3xl text-primary font-bold mb-10">Cualquiera puede aprender</h3>
+				<p class="anta_font anta_space">Nuestra metodología de estudio está diseñada para adaptarse a las necesidades individuales de cada estudiante, sin importar su edad o ritmo de aprendizaje.</p>
 			</div>
 			<div class="img-bg img-4 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
 				<div class="fondo rounded-3xl absolute"></div>
-				<h1 class="text-3xl text-primary font-bold mb-10">Mejora la habilidad motora</h1>
-				<p class="anta_font anta_space">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis ab mollitia accusantium
-					praesentium facilis, pariatur sunt dolor sint, architecto adipisci eaque quam animi esse inventore
-					aliquam est minima omnis?</p>
+				<h5 class="text-3xl text-primary font-bold mb-10">Enfoque profesional</h3>
+				<p class="anta_font anta_space">Enfocamos nuestra enseñanza con un enfoque profesional que abarca tanto la práctica como la teoría musical, con el objetivo de formar músicos altamente capacitados y profesionales.</p>
+			</div>
+			<div class="img-bg img-5 p-6 rounded-3xl shadow-primary-focus shadow-home-images">
+				<div class="fondo rounded-3xl absolute"></div>
+				<h5 class="text-3xl text-primary font-bold mb-10">Compañerismo</h3>
+				<p class="anta_font anta_space">Promovemos un ambiente de compañerismo y cooperación donde se fomenta la armonía y el trabajo en equipo como valores fundamentales.</p>
 			</div>
 		</div>
 
@@ -177,12 +174,13 @@
 				<div class="fondo rounded-3xl"></div>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6 anta_font">Experiencia</h3>
-				<p class="text-base anta_font anta_space font-thin">Ofrecemos una variedad de cursos y contamos con años dedicandonos a la enseñansa del arte de la música</p>
+				<h5 class="text-4xl font-bold text-primary mb-6 anta_font">Experiencia</h3>
+				<p class="text-base anta_font anta_space font-thin">Descubre nuestra amplia selección de cursos de música a precios asequibles, respaldada por años de experiencia dedicados a la enseñanza del arte musical.</p>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6 anta_font">Variedad</h3>
-				<p class="text-base anta_font anta_space font-thin">Tenemos una gran variedad de instrumentos músicales</p>
+				<h5 class="text-4xl font-bold text-primary mb-6 anta_font">Variedad</h3>
+				<p class="text-base anta_font anta_space font-thin">Explora nuestra variedad de instrumentos musicales, contamos clases de piano, canto, guitarra, bateria, bajo y violín.
+				</p>
 			</div>
 			<div class="img-2 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
 				<div class="fondo rounded-3xl"></div>
@@ -191,12 +189,12 @@
 				<div class="fondo rounded-3xl"></div>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6 anta_font">Cualquiera puede aprender</h3>
-				<p class="text-base anta_font anta_space font-thin">No importa tu edad, ni tu ritmo de aprendizaje, nuestra metodologia de estudio busca adaptarse a las necesidades de cada estudiante.</p>
+				<h5 class="text-4xl font-bold text-primary mb-6 anta_font">Cualquiera puede aprender</h3>
+				<p class="text-base anta_font anta_space font-thin">Nuestra metodología de estudio está diseñada para adaptarse a las necesidades individuales de cada estudiante, sin importar su edad o ritmo de aprendizaje.</p>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6 anta_font">Enfoque profesional</h3>
-				<p class="text-base anta_font anta_space font-thin">Nos enfocamos en dar un aprendizaje con enfoque profesional, que no solo abarca la practica, si no también la teoria, con el objetivo de formar a músicos implacables.</p>
+				<h5 class="text-4xl font-bold text-primary mb-6 anta_font">Enfoque profesional</h3>
+				<p class="text-base anta_font anta_space font-thin">Enfocamos nuestra enseñanza con un enfoque profesional que abarca tanto la práctica como la teoría musical, con el objetivo de formar músicos altamente capacitados y profesionales.</p>
 			</div>
 			<div class="img-4 w-full h-full img-bg-md rounded-3xl shadow-home-images shadow-primary-focus">
 				<div class="fondo rounded-3xl"></div>
@@ -206,8 +204,8 @@
 				<div class="fondo rounded-3xl"></div>
 			</div>
 			<div class="flex flex-col items-center justify-center text-center p-4">
-				<h3 class="text-4xl font-bold text-primary mb-6 anta_font">Compañerismo</h3>
-				<p class="text-base anta_font anta_space font-thin">Impulsamos un ambiente armonico y cooperativo, en el que priorizamos </p>
+				<h5 class="text-4xl font-bold text-primary mb-6 anta_font">Compañerismo</h3>
+				<p class="text-base anta_font anta_space font-thin">Promovemos un ambiente de compañerismo y cooperación donde se fomenta la armonía y el trabajo en equipo como valores fundamentales.</p>
 			</div>
 
 			
@@ -233,6 +231,7 @@
 	<div class="relative w-full">
 		<div class="bg-primary w-full h-[1px] absolute top-[-1px]"></div>
 	</div>
+
 	<section class="w-full bg-primary h-[100vh] flex justify-center items-center relative">
 		<div class="container mx-auto flex flex-col items-center justify-center">
 			<h1 class="text-center text-4xl sm:text-5xl md:text-6xl font-bold text-black z-10 anta_font">¿Que estas esperando para
@@ -262,31 +261,31 @@
                 {% if instrumentos.piano %}
                 {% if instrumentos.piano.discount.state == 'Valido' %}
                 <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</53>
                     <div class="prices">
-                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.piano.price}}$</h4>
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.piano.discount.price}}$</h4>
+                        <h6 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.piano.price}}$</h4>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.piano.discount.price}}$</h6>
                         <div></div>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 
                     </div>
                 </div>
                 {% else %}
                 <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.piano.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.piano.price}}$</h4>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.piano.price}}$</h6>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-full">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.piano.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.piano}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% endif %}
@@ -295,30 +294,30 @@
                 {% if instrumentos.sing %}
                 {% if instrumentos.sing.discount.state == 'Valido' %}
                 <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.sing.price}}$</h4>
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.sing.discount.price}}$</h4>
+                        <h6 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.sing.price}}$</h6>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.sing.discount.price}}$</h6>
                         <div></div>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% else %}
                 <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.sing.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.sing.price}}$</h4>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.sing.price}}$</h6>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.sing.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.canto}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
 
                     </div>
                 </div>
@@ -328,30 +327,30 @@
                 {% if instrumentos.guitar %}
                 {% if instrumentos.guitar.discount.state == 'Valido' %}
                 <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.guitar.price}}$</h4>
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.guitar.discount.price}}$</h4>
+                        <h6 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.guitar.price}}$</h6>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.guitar.discount.price}}$</h6>
                         <div></div>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% else %}
                 <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.guitar.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.guitar.price}}$</h4>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.guitar.price}}$</h6>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.guitar.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.guitarra}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% endif %}
@@ -360,30 +359,30 @@
                 {% if instrumentos.drumps %}
                 {% if instrumentos.drumps.discount.state == 'Valido' %}
                 <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.drumps.price}}$</h4>
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.drumps.discount.price}}$</h4>
+                        <h6 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.drumps.price}}$</h6>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.drumps.discount.price}}$</h6>
                         <div></div>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% else %}
                 <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.drumps.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.drumps.price}}$</h4>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.drumps.price}}$</h6>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.drumps.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bateria}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% endif %}
@@ -392,30 +391,30 @@
                 {% if instrumentos.bass %}
                 {% if instrumentos.bass.discount.state == 'Valido' %}
                 <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.bass.price}}$</h4>
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.bass.discount.price}}$</h4>
+                        <h6 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.bass.price}}$</h6>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.bass.discount.price}}$</h6>
                         <div></div>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% else %}
                 <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.bass.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.bass.price}}$</h4>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.bass.price}}$</h6>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.bass.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.bajo}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% endif %}
@@ -424,10 +423,10 @@
                 {% if instrumentos.violin %}
                 {% if instrumentos.violin.discount.state == 'Valido' %}
                 <div class="h-[416px] w-full bg-primary-focus rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px] text-black">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.violin.price}}$</h4>
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.violin.discount.price}}$</h4>
+                        <h6 class="text-xl inline-block line-through decoration-red-700 decoration">{{instrumentos.violin.price}}$</h6>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.violin.discount.price}}$</h6>
                         <div></div>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
@@ -439,15 +438,15 @@
                 </div>
                 {% else %}
                 <div class="h-[480px] w-full w border-primary border-2 rounded-3xl flex flex-col sm:w-[280px] min-[800px]:w-[350px] min-[1100px]:w-[300px]">
-                    <h3 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h3>
+                    <h5 class="text-3xl p-4 font-semibold relative anta_font anta_space">{{instrumentos.violin.name}}</h5>
                     <div class="prices">
-                        <h4 class="text-2xl inline-block anta_font">{{instrumentos.violin.price}}$</h4>
+                        <h6 class="text-2xl inline-block anta_font">{{instrumentos.violin.price}}$</h6>
                         <!-- <h4 class="text-2xl inline-block">15.00$</h4> -->
                     </div>
                     <div class="divider"></div>
                     <div class="flex flex-col grow w-f">
                         <p class="px-2 grow break-words anta_font font-thin">{{instrumentos.violin.description}}</p>
-                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.violin}}">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
+                        <a class="btn bg-[#25D366] hover:bg-[#128C7E] my-6 w-[70%] min-[350px]:w-[55%] min-[639px]:w-[58%] mx-auto anta_font anta_space break-keep" href="{{mensajes.violin}}" target="_blank">Preguntar <span class="icomoon-whatsapp text-xl"></span></a>
                     </div>
                 </div>
                 {% endif %}
