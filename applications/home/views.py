@@ -84,5 +84,5 @@ class HomeView(TemplateView):
 
 
 def serve_robots_txt(request):
-    content = "User-agent: *\nDisallow:"
+    content = "User-agent: *\nDisallow: /sitemap.xml"
     return HttpResponse(content, content_type='text/plain')

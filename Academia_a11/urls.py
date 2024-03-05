@@ -21,11 +21,28 @@ from django.conf import settings
 from django.conf.urls.static import static
 from applications.home.views import serve_robots_txt
 
+from django.contrib.sitemaps.views import sitemap
+from django.urls import path
+
+from applications.home.sitemaps import StaticViewSitemap
+
+sitemaps = {
+    "static": StaticViewSitemap,
+}
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(pattern_name='home:home')),
     path("home/", include("applications.home.urls", namespace="home")),
     path("gallery/", include("applications.gallery.urls")),
-    path("robots.txt", serve_robots_txt, name="robots")
+    path("robots.txt", serve_robots_txt, name="robots"),
+
+    ## SITEMAP
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
