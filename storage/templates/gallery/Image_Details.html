@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}Academia A11 | Imagen Detail{% endblock title %}
+{% block body %}
+
+{% include 'includes/header.html' %}
+
+<main class="w-full h-screen">
+    <div class="h-24"></div>
+    <div class="container mx-auto">
+        <div class="flex flex-col items-center text-center">
+            <img src="{{imagen.image.url}}" alt="{{imagen.title}}" class="max-h-[700px] border-primary border-2">
+            <h1 class="text-4xl my-12 text-primary font-bold break-words anta_font">{{imagen.titulo}}</h1>
+        </div>
+        <div class="divider"></div>
+        <div class="text-center anta_font anta_space">
+            <span>{{imagen.pub_date}}</span>
+        </div>
+        <div class="h-20"></div>
+    </div>
+</main>
+
+{% endblock body %}
+
+</body>
+
+</html>
