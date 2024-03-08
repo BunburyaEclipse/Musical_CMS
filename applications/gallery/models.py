@@ -16,8 +16,7 @@ def custom_image_name(instance, filename):
     if ext == "png" or ext == "jpg" or ext == "jpeg" or ext == "webp":
         # Genera un nuevo nombre para el archivo utilizando el ID del objeto y la extensión
         slugify_title = slugify(instance.titulo)
-        pub_date_formatted = instance.pub_date.strftime('%Y-%m-%d')
-        new_filename = f'-{slugify_title}-{pub_date_formatted}_{instance.id}.{ext}'
+        new_filename = f'{slugify_title}-{instance.id}.{ext}'
         # Devuelve la ruta completa del archivo
         return os.path.join('images/', new_filename)
     else:
@@ -48,6 +47,6 @@ def optimize_image(sender, instance, **kwargs):
         print(instance.image.path)
         img.save(instance.image.path, format="WEBP", optimize=True, quality=50)
 
-
+ 
 
 post_save.connect(optimize_image, sender=Image)
