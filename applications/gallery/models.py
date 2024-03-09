@@ -26,7 +26,7 @@ def custom_image_name(instance, filename):
 class Image(models.Model):
     titulo = models.CharField(max_length=200, blank=False)
     slug = models.SlugField(unique=True, blank=True, editable=False)
-    image = models.ImageField(upload_to=f"images/{custom_image_name}", blank=False)
+    image = models.ImageField(upload_to=custom_image_name, blank=False)
     pub_date = models.DateTimeField("Fecha de publicacion", default=timezone.now, blank=True, null=False, editable=False)
     public = models.BooleanField("Publico", default=False)
     principal = models.BooleanField("Visible en la pantalla principal", default=False)
