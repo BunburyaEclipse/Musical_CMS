@@ -4,6 +4,7 @@ from os import path
 from .env_var import RENDER_EXTERNAL_HOSTNAME
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = False
 
 ALLOWED_HOSTS = []
@@ -23,22 +24,22 @@ DATABASES = {
 # DATABASES["default"] = dj_database_url.parse("postgres://deus:OrZmSVTxLKcHl24DbgBd7cURmvpcSHFh@dpg-cncj1qen7f5s73bh31ug-a.oregon-postgres.render.com/db_academia")
 
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/gallery/'
-
-
-
 STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = path.join(BASE_DIR, 'media')
 
 
+STATICFILES_DIRS = (
+    STORAGE_DIR / 'static',
+)
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/gallery/'
+MEDIA_URL = '/gallery_media/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
